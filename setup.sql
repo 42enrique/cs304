@@ -24,19 +24,30 @@ CREATE TABLE Account(
   username varchar2(50) UNIQUE, 
   password varchar2(20) not null, 
   dateCreated date not null, 
-  birthday date
+  birthday date,
+  country varchar2(50),
+  name varchar2(50),
+  followers integer DEFAULT 0,
+  following integer DEFAULT 0,
+  color varchar2(20) DEFAULT "grey",
+  posts integer DEFAULT 0
 );
 
 CREATE TABLE Forum(
   forumID integer not null PRIMARY KEY, 
   name varchar2(50) not null, 
-  topic varchar2(20) not null
+  topic varchar2(20) not null,
+  participants integer DEFAULT 0,
+  isLive integer DEFAULT 1,
+  posts integer DEFAULT 0
 );
 
 CREATE TABLE Chat(
   chatID integer not null PRIMARY KEY, 
   name varchar2(50), 
-  color varchar2(7)
+  messages integer DEFAULT 0,
+  max_users integer DEFAULT 100,
+  color varchar2(20) DEFAULT "grey"
 );
 
 CREATE TABLE Subscription(
@@ -354,16 +365,123 @@ INSERT INTO Subscriber VALUES (
 
 INSERT INTO Owns_Subscriptions VALUES (
   2,0,1
-)
+);
 
 INSERT INTO Owns_Subscriptions VALUES (
   1,0,2
-)
+);
 
 INSERT INTO Owns_Subscriptions VALUES (
-  2,0,1
-)
+  4,1,3
+);
 
 INSERT INTO Owns_Subscriptions VALUES (
-  2,0,1
+  4,4,4
+);
+
+INSERT INTO Owns_Subscriptions VALUES (
+  4,3,5
+);
+
+INSERT INTO Contains_Messages VALUES (
+  1,
+  1,
+  "Donald",
+  "Trump",
+  TIMESTAMP("2009-04-08",  "00:11:22")
+);
+
+INSERT INTO Contains_Messages VALUES (
+  1,
+  2,
+  "Donald",
+  "Duck",
+  TIMESTAMP("2010-04-08",  "00:11:22")
+);
+
+INSERT INTO Contains_Messages VALUES (
+  1,
+  3,
+  "Vladimir",
+  "Putin",
+  TIMESTAMP("2011-04-08",  "00:11:22")
+);
+
+INSERT INTO Contains_Messages VALUES (
+  2,
+  1,
+  "Vladimir",
+  "Poutine",
+  TIMESTAMP("2022-04-08",  "00:11:22")
+);
+
+INSERT INTO Contains_Messages VALUES (
+  2,
+  2,
+  "Zelensky",
+  "Netanyahu",
+  TIMESTAMP("2010-04-08",  "00:11:22")
+);
+
+INSERT INTO Owns_Live_Assets VALUES (
+  1,
+  1,
+  "mp3",
+  TIMESTAMP("2021-04-08",  "00:11:22"),
+  "www.nwPlus.io",
+  0
+)
+
+INSERT INTO Owns_Live_Assets VALUES (
+  1,
+  1,
+  "",
+  TIMESTAMP("2009-04-08",  "00:11:22"),
+  "",
+  0
+)
+
+INSERT INTO Owns_Live_Assets VALUES (
+  1,
+  1,
+  "",
+  TIMESTAMP("2009-04-08",  "00:11:22"),
+  "",
+  0
+)
+
+INSERT INTO Owns_Live_Assets VALUES (
+  1,
+  1,
+  "",
+  TIMESTAMP("2009-04-08",  "00:11:22"),
+  "",
+  0
+)
+
+INSERT INTO Owns_Live_Assets VALUES (
+  1,
+  1,
+  "",
+  TIMESTAMP("2009-04-08",  "00:11:22"),
+  "",
+  0
+)
+
+INSERT INTO Owns_Live_Assets VALUES (
+  1,
+  1,
+  "",
+  TIMESTAMP("2009-04-08",  "00:11:22"),
+  "",
+  0
+)
+
+INSERT INTO Owns_Live_Assets VALUES (
+  1,
+  1,
+  "",
+  TIMESTAMP("2009-04-08",  "00:11:22"),
+  "",
+  0
 )
