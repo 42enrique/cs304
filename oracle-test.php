@@ -32,13 +32,82 @@
             <p><input type="submit" value="Reset" name="reset"></p>
         </form>
 
-        <hr />
+        <hr/>
 
-        <h2>Insert Values into DemoTable</h2>
+        <h2>Create Users</h2>
         <form method="POST" action="oracle-test.php"> <!--refresh page when submitted-->
             <input type="hidden" id="insertQueryRequest" name="insertQueryRequest">
-            Number: <input type="text" name="insNo"> <br /><br />
-            Name: <input type="text" name="insName"> <br /><br />
+            Email: <input type="text" name="user_email"> 
+            Username: <input type="text" name="user_name"> 
+            Password: <input type="text" name="user_password">
+
+            <input type="submit" value="Insert" name="insertSubmit"></p>
+        </form>
+        <hr />
+
+        <h2>Update Email</h2>
+        <form method="POST" action="oracle-test.php"> <!--refresh page when submitted-->
+            <input type="hidden" id="insertQueryRequest" name="insertQueryRequest">
+            Username: <input type="text" name="user_name">
+            Email: <input type="text" name="user_email">
+
+            <input type="submit" value="Insert" name="insertSubmit"></p>
+        </form>
+
+        <hr />
+
+        <h2>Select:  Posts above X Likes</h2>
+        <form method="POST" action="oracle-test.php"> <!--refresh page when submitted-->
+            <input type="hidden" id="insertQueryRequest" name="insertQueryRequest">
+            Likes: <input type="text" name="">
+
+            <input type="submit" value="Insert" name="insertSubmit"></p>
+        </form>
+
+        <hr />
+
+        <h2>Join:  Users who have been in the same livestream </h2>
+        <form method="POST" action="oracle-test.php"> <!--refresh page when submitted-->
+            <input type="hidden" id="insertQueryRequest" name="insertQueryRequest">
+            Likes: <input type="text" name="insNo">
+
+            <input type="submit" value="Insert" name="insertSubmit"></p>
+        </form>
+
+        <hr />
+
+        <h2>Projection: Select Forums by Topic</h2>
+        <form method="POST" action="oracle-test.php"> <!--refresh page when submitted-->
+            <input type="hidden" id="insertQueryRequest" name="insertQueryRequest">
+
+            <label for="pet-select">Filter Forums by Topic:</label> 
+
+            <select name="pets" id="pet-select">
+                <option value="">Choose an Option</option>
+                <option value="dog">Stocks</option>
+                <option value="cat">Tech</option>
+                <option value="hamster">Furries</option>
+                <option value="parrot">Feet Pics</option>
+            </select>
+
+            <input type="submit" value="Insert" name="insertSubmit"></p>
+        </form>
+
+        <hr />
+
+        <h2>Aggregate: Select Users with Most X</h2>
+        <form method="POST" action="oracle-test.php"> <!--refresh page when submitted-->
+            <input type="hidden" id="insertQueryRequest" name="insertQueryRequest">
+
+            <label for="pet-select">Select:</label> 
+
+            <select name="pets" id="pet-select">
+                <option value="">Choose an Option</option>
+                <option value="dog">Posts</option>
+                <option value="cat">Messages</option>
+                <option value="hamster">Livestreams</option>
+                <option value="parrot">Pictures</option>
+            </select>
 
             <input type="submit" value="Insert" name="insertSubmit"></p>
         </form>
@@ -58,10 +127,11 @@
 
         <hr />
 
-        <h2>Count the Tuples in DemoTable</h2>
+        <h2>EHWAH</h2>
         <form method="GET" action="oracle-test.php"> <!--refresh page when submitted-->
             <input type="hidden" id="countTupleRequest" name="countTupleRequest">
             <input type="submit" name="countTuples"></p>
+            
         </form>
 
         <?php
@@ -156,7 +226,7 @@
 
             // Your username is ora_(CWL_ID) and the password is a(student number). For example,
 			// ora_platypus is the username and a12345678 is the password.
-            $db_conn = OCILogon("ora_cwl", "a12345678", "dbhost.students.cs.ubc.ca:1522/stu");
+            $db_conn = OCILogon("ora_remc2017", "a96769773", "dbhost.students.cs.ubc.ca:1522/stu");
 
             if ($db_conn) {
                 debugAlertMessage("Database is Connected");
