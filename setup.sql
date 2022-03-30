@@ -29,7 +29,7 @@ CREATE TABLE Account(
   name varchar2(50),
   followers integer DEFAULT 0,
   following integer DEFAULT 0,
-  color varchar2(20) DEFAULT "grey",
+  color varchar2(20) DEFAULT 'Gray',
   posts integer DEFAULT 0,
   top_interest varchar2(20)
 );
@@ -48,7 +48,7 @@ CREATE TABLE Chat(
   name varchar2(50), 
   messages integer DEFAULT 0,
   max_users integer DEFAULT 100,
-  color varchar2(20) DEFAULT "grey"
+  color varchar2(20) DEFAULT 'Gray'
 );
 
 CREATE TABLE Subscription(
@@ -172,25 +172,19 @@ CREATE TABLE Uses_Pubsub_Platform(
   FOREIGN KEY(topicID) REFERENCES Topic ON DELETE CASCADE
 );
 
--- INSERT INTO Branch 
--- VALUES 
---   (
---     1, "ABC", "123 Charming Ave", "Vancouver", 
---     "6041234567"
---   );
--- INSERT INTO Branch 
--- VALUES 
---   (
---     2, "DEF", "123 Coco Ave", "Vancouver", 
---     "6044567890"
---   );
-
 INSERT INTO Account VALUES (
   1, "mailtrapsupertesting+signup@gmail.com",
    mighty-dusk,
     "Agc%[A5Ag*", 
     TIMESTAMP("2017-07-23",  "13:10:11"), 
-    TIMESTAMP("2002-03-29",  "12:43:01")
+    TIMESTAMP("2002-03-29",  "12:43:01"),
+    "Canada",
+    "Ray",
+    213,
+    234,
+    "Blue",
+    234,
+    "stocks"
 );
 
 INSERT INTO Account VALUES (
@@ -198,7 +192,14 @@ INSERT INTO Account VALUES (
    happy-puppy,
     "}bGG93Y}Vh", 
     TIMESTAMP("2014-03-11",  "11:11:11"), 
-    TIMESTAMP("2003-03-24",  "12:43:00")
+    TIMESTAMP("2003-03-24",  "12:43:00"),
+    "Canada",
+    "Ray",
+    213,
+    234,
+    "Red",
+    234,
+    "stocks"
 );
 
 INSERT INTO Account VALUES (
@@ -206,7 +207,14 @@ INSERT INTO Account VALUES (
    wb_dreaming,
     ".WS9bzrVf}", 
     TIMESTAMP("2009-04-08",  "00:11:22"), 
-    TIMESTAMP("2000-03-24",  "12:33:44")
+    TIMESTAMP("2000-03-24",  "12:33:44"),
+    "Canada",
+    "Ray",
+    213,
+    234,
+    "Gray",
+    234,
+    "stocks"
 );
 
 INSERT INTO Account VALUES (
@@ -214,7 +222,14 @@ INSERT INTO Account VALUES (
    hackers_anon,
     "VP9.fQ$(V^", 
     TIMESTAMP("2022-04-08",  "00:11:22"), 
-    TIMESTAMP("2004-12-12",  "07:07:07")
+    TIMESTAMP("2004-12-12",  "07:07:07"),
+    "Canada",
+    "Ray",
+    213,
+    234,
+    "Blue",
+    234,
+    "stocks"
 );
 
 INSERT INTO Account VALUES (
@@ -222,72 +237,109 @@ INSERT INTO Account VALUES (
    Zelensky,
     "8Jy/.Mu&wj", 
     TIMESTAMP("2020-05-09",  "00:11:22"), 
-    TIMESTAMP("2004-12-12",  "06:06:06")
+    TIMESTAMP("2004-12-12",  "06:06:06"),
+    "Canada",
+    "Ray",
+    213,
+    234,
+    "Blue",
+    234,
+    "stocks"
 );
 
 INSERT INTO Forum VALUES (
   1, 
   "Spinning Jokes for Ray Tracing University Students", 
-  "PEACE"
+  "PEACE",
+  345,
+  1,
+  123
 );
 
 INSERT INTO Forum VALUES (
   2, 
   "Kremlin File", 
-  "PUTIN"
+  "PUTIN",
+  345,
+  1,
+  123
 );
 
 INSERT INTO Forum VALUES (
   3, 
   "Wholesome Bird Pictures", 
-  "FREEDOM"
+  "FREEDOM",
+  345,
+  1,
+  123
 );
 
 INSERT INTO Forum VALUES (
   4, 
   "You Have the World's Support", 
-  "UKRAINE"
+  "UKRAINE",
+  345,
+  1,
+  123
 );
 
 INSERT INTO Forum VALUES (
   5, 
   "Sims 3 Genocide ", 
-  "PIPELINES"
+  "PIPELINES",
+  345,
+  1,
+  123
 );
 
 INSERT INTO Chat VALUES (
   0,
   "SOLIDER",
-  "purple"
+  "purple",
+  345,
+  1,
+  "123"
 );
 
 INSERT INTO Chat VALUES (
   1,
   "LIBERATION FRONT",
-  "grey"
+  "grey",
+  345,
+  1,
+  "123"
 );
 
 INSERT INTO Chat VALUES (
   2,
   "Metallica Fans",
-  "red"
+  "red",
+  345,
+  1,
+  "123"
 );
 
 INSERT INTO Chat VALUES (
   3,
   "FALLOUT 4",
-  "blue"
+  "blue",
+  345,
+  1,
+  "123"
 );
 
 INSERT INTO Chat VALUES (
   4,
   "Insider Traders",
-  "chrome"
+  "chrome",
+  345,
+  1,
+  "123"
 );
 
 INSERT INTO Subscriptions VALUES (
   0,
-  "CORN MAZE "
+  "CORN MAZE"
 );
 
 INSERT INTO Subscriptions VALUES (
@@ -521,4 +573,205 @@ INSERT INTO Owns_Static_Assets VALUES (
 "jpeg",
 "GoogleverseFile",
 "16k"
+);
+
+INSERT INTO Contains_Posts VALUES (
+  5,
+  1,
+  2,
+  "FREE",
+  TIMESTAMP("2033-04-08",  "00:11:22"),
+);
+
+
+INSERT INTO Contains_Posts VALUES (
+  1,
+  1,
+  2,
+  "WORLD",
+  TIMESTAMP("2044-04-08",  "00:11:22"),
+);
+
+INSERT INTO Contains_Posts VALUES (
+  2,
+  1,
+  5,
+  "PEACE",
+  TIMESTAMP("2055-04-08",  "00:11:22"),
+);
+
+INSERT INTO Contains_Posts VALUES (
+  3,
+  1,
+  4,
+  "LEBRONE",
+  TIMESTAMP("2066-04-08",  "00:11:22"),
+);
+
+INSERT INTO Contains_Posts VALUES (
+  5,
+  1,
+  1,
+  "JAMES",
+  TIMESTAMP("2077-04-08",  "00:11:22"),
+);
+
+INSERT INTO Member_Of VALUES (
+  1,
+  TIMESTAMP("2077-04-08",  "00:11:22"),
+  5,
+  0
+);
+
+INSERT INTO Member_Of VALUES (
+  1,
+  TIMESTAMP("2055-04-08",  "00:11:22"),
+  1,
+  1
+);
+
+INSERT INTO Member_Of VALUES (
+  2,
+  TIMESTAMP("2088-04-08",  "00:11:22"),
+  6,
+  1
+);
+
+INSERT INTO Member_Of VALUES (
+  4,
+  TIMESTAMP("2099-04-08",  "00:11:22"),
+  3,
+  0
+);
+
+INSERT INTO Member_Of VALUES (
+  5,
+  TIMESTAMP("2011-04-08",  "00:11:22"),
+  2,
+  1
+);
+
+INSERT INTO Participates_In VALUES (
+1,
+TIMESTAMP("2011-04-08",  "00:11:22"),
+1
+);
+
+INSERT INTO Participates_In VALUES (
+3,
+TIMESTAMP("2123-04-08",  "00:11:22"),
+2
+);
+
+INSERT INTO Participates_In VALUES (
+3,
+TIMESTAMP("2321-04-08",  "00:11:22"),
+3
+);
+
+INSERT INTO Participates_In VALUES (
+5,
+TIMESTAMP("2423-04-08",  "00:11:22"),
+4
+);
+
+INSERT INTO Participates_In VALUES (
+4,
+TIMESTAMP("2934-04-08",  "00:11:22"),
+5
+);
+
+INSERT INTO Link_To VALUES (
+  4,1,1
+);
+
+INSERT INTO Link_To VALUES (
+  3,2,1
+);
+
+INSERT INTO Link_To VALUES (
+  1,3,4
+);
+
+INSERT INTO Link_To VALUES (
+  2,4,4
+);
+
+INSERT INTO Link_To VALUES (
+  5,5,5
+);
+
+INSERT INTO Uses_Message_Storage (
+  1,
+  3,
+  1231,
+  12,
+  513
+);
+
+INSERT INTO Uses_Message_Storage (
+  2,
+  2,
+  23443,
+  14,
+  553
+);
+
+INSERT INTO Uses_Message_Storage (
+  3,
+  1,
+  12131,
+  21,
+  463
+);
+
+INSERT INTO Uses_Message_Storage (
+  4,
+  5,
+  9232,
+  30,
+  345
+);
+
+INSERT INTO Uses_Message_Storage (
+  5,
+  4,
+  2345789,
+  12,
+  234
+);
+
+INSERT INTO Uses_Pubsub_Platform VALUES (
+  1,
+  1,
+  200,
+  1000
+);
+
+INSERT INTO Uses_Pubsub_Platform VALUES (
+  2,
+  4,
+  100,
+  1000
+);
+
+INSERT INTO Uses_Pubsub_Platform VALUES (
+  3,
+  2,
+  1000,
+  2000
+);
+
+INSERT INTO Uses_Pubsub_Platform VALUES (
+  4,
+  5,
+  500,
+  3000
+);
+
+INSERT INTO Uses_Pubsub_Platform VALUES (
+  5,
+  3,
+  50,
+  3000
 );

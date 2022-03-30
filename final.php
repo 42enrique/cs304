@@ -16,7 +16,7 @@
   extension.  You must also change the username and password on the
   OCILogon below to be your ORACLE username and password -->
 
-<html>
+  <html>
     <head>
 	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
         <title>CPSC 304 PHP/Oracle Demonstration</title>
@@ -226,11 +226,7 @@
 
             // Your username is ora_(CWL_ID) and the password is a(student number). For example,
 			// ora_platypus is the username and a12345678 is the password.
-<<<<<<< HEAD
-            $db_conn = OCILogon("ora_remc2017", "a96769773", "dbhost.students.cs.ubc.ca:1522/stu");
-=======
             $db_conn = OCILogon("ora_lankun", "a13649355", "dbhost.students.cs.ubc.ca:1522/stu");
->>>>>>> 3f27c08cf886e8994b862bf9db143d9e4e83c6d5
 
             if ($db_conn) {
                 debugAlertMessage("Database is Connected");
