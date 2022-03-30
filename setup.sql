@@ -247,29 +247,123 @@ INSERT INTO Chat VALUES (
   0,
   "SOLIDER",
   "purple"
-)
+);
 
 INSERT INTO Chat VALUES (
   1,
   "LIBERATION FRONT",
   "grey"
-)
+);
 
 INSERT INTO Chat VALUES (
   2,
   "Metallica Fans",
   "red"
-)
+);
 
 INSERT INTO Chat VALUES (
   3,
   "FALLOUT 4",
   "blue"
-)
+);
 
 INSERT INTO Chat VALUES (
   4,
   "Insider Traders",
   "chrome"
+);
+
+INSERT INTO Subscriptions VALUES (
+  0,
+  "CORN MAZE "
+);
+
+INSERT INTO Subscriptions VALUES (
+  1,
+  "BITCOIN WHALERS"
+);
+
+INSERT INTO Subscriptions VALUES (
+  2,
+  "SECURITIES FRAUD"
+);
+
+INSERT INTO Subscriptions VALUES (
+  3,
+  "Youtube Dislike"
+);
+
+INSERT INTO Subscriptions VALUES (
+  4,
+  "LOLOLOLOL"
+);
+
+INSERT INTO TOPIC VALUES (
+  0
+);
+
+INSERT INTO TOPIC VALUES (
+  1
+);
+
+INSERT INTO TOPIC VALUES (
+  2
+);
+
+INSERT INTO TOPIC VALUES (
+  3
+);
+
+INSERT INTO TOPIC VALUES (
+  4
+);
+
+INSERT INTO TOPIC VALUES (
+  5
+);
+
+INSERT INTO Subscriber VALUES (
+  0,
+  "RWANADA",
+  "mobile"
+);
+
+INSERT INTO Subscriber VALUES (
+  1,
+  "ISRAEL",
+  "laptop"
+);
+
+INSERT INTO Subscriber VALUES (
+  2,
+  "GREECE",
+  "mobile"
+);
+
+INSERT INTO Subscriber VALUES (
+  3,
+  "CANADA",
+  "PC"
+);
+
+INSERT INTO Subscriber VALUES (
+  4,
+  "ZIMBAWABE",
+  "iphone"
+);
+
+INSERT INTO Owns_Subscriptions VALUES (
+  2,0,1
 )
 
+INSERT INTO Owns_Subscriptions VALUES (
+  1,0,2
+)
+
+INSERT INTO Owns_Subscriptions VALUES (
+  2,0,1
+)
+
+INSERT INTO Owns_Subscriptions VALUES (
+  2,0,1
+)
