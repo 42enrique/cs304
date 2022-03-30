@@ -29,7 +29,7 @@ CREATE TABLE Account(
 
 CREATE TABLE Forum(
   forumID integer not null PRIMARY KEY, 
-  name varchar2(20) not null, 
+  name varchar2(50) not null, 
   topic varchar2(20) not null
 );
 
@@ -174,5 +174,102 @@ CREATE TABLE Uses_Pubsub_Platform(
 --   );
 
 INSERT INTO Account VALUES (
-  1, "mailtrapsupertesting+signup@gmail.com", mighty-dusk, "Agc%[A5Ag*",
+  1, "mailtrapsupertesting+signup@gmail.com",
+   mighty-dusk,
+    "Agc%[A5Ag*", 
+    TIMESTAMP("2017-07-23",  "13:10:11"), 
+    TIMESTAMP("2002-03-29",  "12:43:01")
+);
+
+INSERT INTO Account VALUES (
+  2, "mailtrapsupertesting+newsletter@gmail.com",
+   happy-puppy,
+    "}bGG93Y}Vh", 
+    TIMESTAMP("2014-03-11",  "11:11:11"), 
+    TIMESTAMP("2003-03-24",  "12:43:00")
+);
+
+INSERT INTO Account VALUES (
+  3, "mailtrapsupertesting+premiumacc@gmail.com",
+   wb_dreaming,
+    ".WS9bzrVf}", 
+    TIMESTAMP("2009-04-08",  "00:11:22"), 
+    TIMESTAMP("2000-03-24",  "12:33:44")
+);
+
+INSERT INTO Account VALUES (
+  4, "mailtrapsupertesting+saasupgrade@gmail.com",
+   hackers_anon,
+    "VP9.fQ$(V^", 
+    TIMESTAMP("2022-04-08",  "00:11:22"), 
+    TIMESTAMP("2004-12-12",  "07:07:07")
+);
+
+INSERT INTO Account VALUES (
+  5, "LOLOLO@FREEUKRAINE.RU",
+   Zelensky,
+    "8Jy/.Mu&wj", 
+    TIMESTAMP("2020-05-09",  "00:11:22"), 
+    TIMESTAMP("2004-12-12",  "06:06:06")
+);
+
+INSERT INTO Forum VALUES (
+  1, 
+  "Spinning Jokes for Ray Tracing University Students", 
+  "PEACE"
+);
+
+INSERT INTO Forum VALUES (
+  2, 
+  "Kremlin File", 
+  "PUTIN"
+);
+
+INSERT INTO Forum VALUES (
+  3, 
+  "Wholesome Bird Pictures", 
+  "FREEDOM"
+);
+
+INSERT INTO Forum VALUES (
+  4, 
+  "You Have the World's Support", 
+  "UKRAINE"
+);
+
+INSERT INTO Forum VALUES (
+  5, 
+  "Sims 3 Genocide ", 
+  "PIPELINES"
+);
+
+INSERT INTO Chat VALUES (
+  0,
+  "SOLIDER",
+  "purple"
 )
+
+INSERT INTO Chat VALUES (
+  1,
+  "LIBERATION FRONT",
+  "grey"
+)
+
+INSERT INTO Chat VALUES (
+  2,
+  "Metallica Fans",
+  "red"
+)
+
+INSERT INTO Chat VALUES (
+  3,
+  "FALLOUT 4",
+  "blue"
+)
+
+INSERT INTO Chat VALUES (
+  4,
+  "Insider Traders",
+  "chrome"
+)
+
