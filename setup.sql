@@ -29,7 +29,7 @@ CREATE TABLE Account(
   name varchar2(50),
   followers integer DEFAULT 0,
   following integer DEFAULT 0,
-  color varchar2(20) DEFAULT 'grey',
+  color varchar2(20) DEFAULT 'Gray',
   posts integer DEFAULT 0,
   top_interest varchar2(20)
 );
@@ -48,7 +48,7 @@ CREATE TABLE Chat(
   name varchar2(50), 
   messages integer DEFAULT 0,
   max_users integer DEFAULT 100,
-  color varchar2(20) DEFAULT 'grey'
+  color varchar2(20) DEFAULT 'Gray'
 );
 
 CREATE TABLE Subscription(
@@ -177,7 +177,14 @@ INSERT INTO Account VALUES (
    mighty-dusk,
     "Agc%[A5Ag*", 
     TIMESTAMP("2017-07-23",  "13:10:11"), 
-    TIMESTAMP("2002-03-29",  "12:43:01")
+    TIMESTAMP("2002-03-29",  "12:43:01"),
+    "Canada",
+    "Ray",
+    213,
+    234,
+    "Blue",
+    234,
+    "stocks"
 );
 
 INSERT INTO Account VALUES (
@@ -185,7 +192,14 @@ INSERT INTO Account VALUES (
    happy-puppy,
     "}bGG93Y}Vh", 
     TIMESTAMP("2014-03-11",  "11:11:11"), 
-    TIMESTAMP("2003-03-24",  "12:43:00")
+    TIMESTAMP("2003-03-24",  "12:43:00"),
+    "Canada",
+    "Ray",
+    213,
+    234,
+    "Red",
+    234,
+    "stocks"
 );
 
 INSERT INTO Account VALUES (
@@ -193,7 +207,14 @@ INSERT INTO Account VALUES (
    wb_dreaming,
     ".WS9bzrVf}", 
     TIMESTAMP("2009-04-08",  "00:11:22"), 
-    TIMESTAMP("2000-03-24",  "12:33:44")
+    TIMESTAMP("2000-03-24",  "12:33:44"),
+    "Canada",
+    "Ray",
+    213,
+    234,
+    "Gray",
+    234,
+    "stocks"
 );
 
 INSERT INTO Account VALUES (
@@ -201,7 +222,14 @@ INSERT INTO Account VALUES (
    hackers_anon,
     "VP9.fQ$(V^", 
     TIMESTAMP("2022-04-08",  "00:11:22"), 
-    TIMESTAMP("2004-12-12",  "07:07:07")
+    TIMESTAMP("2004-12-12",  "07:07:07"),
+    "Canada",
+    "Ray",
+    213,
+    234,
+    "Blue",
+    234,
+    "stocks"
 );
 
 INSERT INTO Account VALUES (
@@ -209,72 +237,109 @@ INSERT INTO Account VALUES (
    Zelensky,
     "8Jy/.Mu&wj", 
     TIMESTAMP("2020-05-09",  "00:11:22"), 
-    TIMESTAMP("2004-12-12",  "06:06:06")
+    TIMESTAMP("2004-12-12",  "06:06:06"),
+    "Canada",
+    "Ray",
+    213,
+    234,
+    "Blue",
+    234,
+    "stocks"
 );
 
 INSERT INTO Forum VALUES (
   1, 
   "Spinning Jokes for Ray Tracing University Students", 
-  "PEACE"
+  "PEACE",
+  345,
+  1,
+  123
 );
 
 INSERT INTO Forum VALUES (
   2, 
   "Kremlin File", 
-  "PUTIN"
+  "PUTIN",
+  345,
+  1,
+  123
 );
 
 INSERT INTO Forum VALUES (
   3, 
   "Wholesome Bird Pictures", 
-  "FREEDOM"
+  "FREEDOM",
+  345,
+  1,
+  123
 );
 
 INSERT INTO Forum VALUES (
   4, 
   "You Have the World's Support", 
-  "UKRAINE"
+  "UKRAINE",
+  345,
+  1,
+  123
 );
 
 INSERT INTO Forum VALUES (
   5, 
   "Sims 3 Genocide ", 
-  "PIPELINES"
+  "PIPELINES",
+  345,
+  1,
+  123
 );
 
 INSERT INTO Chat VALUES (
   0,
   "SOLIDER",
-  "purple"
+  "purple",
+  345,
+  1,
+  "123"
 );
 
 INSERT INTO Chat VALUES (
   1,
   "LIBERATION FRONT",
-  "grey"
+  "grey",
+  345,
+  1,
+  "123"
 );
 
 INSERT INTO Chat VALUES (
   2,
   "Metallica Fans",
-  "red"
+  "red",
+  345,
+  1,
+  "123"
 );
 
 INSERT INTO Chat VALUES (
   3,
   "FALLOUT 4",
-  "blue"
+  "blue",
+  345,
+  1,
+  "123"
 );
 
 INSERT INTO Chat VALUES (
   4,
   "Insider Traders",
-  "chrome"
+  "chrome",
+  345,
+  1,
+  "123"
 );
 
 INSERT INTO Subscriptions VALUES (
   0,
-  "CORN MAZE "
+  "CORN MAZE"
 );
 
 INSERT INTO Subscriptions VALUES (
