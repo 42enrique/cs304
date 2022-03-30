@@ -176,8 +176,8 @@ INSERT INTO Account VALUES (
   1, 'mailtrapsupertesting+signup@gmail.com',
    mighty-dusk,
     'Agc%[A5Ag*', 
-    TIMESTAMP('2017-07-23',  '13:10:11'), 
-    TIMESTAMP('2002-03-29',  '12:43:01'),
+    TIMESTAMP '2017-08-09 07:00:00 -7:00', 
+   TIMESTAMP '2017-08-09 07:00:00 -7:00',
     'Canada',
     'Ray',
     213,
@@ -191,8 +191,8 @@ INSERT INTO Account VALUES (
   2, 'mailtrapsupertesting+newsletter@gmail.com',
    happy-puppy,
     '}bGG93Y}Vh', 
-    TIMESTAMP('2014-03-11',  '11:11:11'), 
-    TIMESTAMP('2003-03-24',  '12:43:00'),
+   TIMESTAMP '2017-08-09 07:00:00 -7:00'), 
+    TIMESTAMP '2017-08-09 07:00:00 -7:00',
     'Canada',
     'Ray',
     213,
@@ -206,8 +206,8 @@ INSERT INTO Account VALUES (
   3, 'mailtrapsupertesting+premiumacc@gmail.com',
    wb_dreaming,
     '.WS9bzrVf}', 
-    TIMESTAMP('2009-04-08',  '00:11:22'), 
-    TIMESTAMP('2000-03-24',  '12:33:44'),
+    TIMESTAMP '2017-08-09 07:00:00 -7:00', 
+   TIMESTAMP '2017-08-09 07:00:00 -7:00',
     'Canada',
     'Ray',
     213,
@@ -223,8 +223,8 @@ INSERT INTO Account VALUES (
   'mailtrapsupertesting+saasupgrade@gmail.com',
    hackers_anon,
     'VP9.fQ$(V^', 
-    TIMESTAMP('2022-04-08',  '00:11:22'), 
-    TIMESTAMP('2004-12-12',  '07:07:07'),
+    TIMESTAMP '2017-08-09 07:00:00 -7:00', 
+    TIMESTAMP '2017-08-09 07:00:00 -7:00',
     'Canada',
     'Ray',
     213,
@@ -238,8 +238,8 @@ INSERT INTO Account VALUES (
   5, 'LOLOLO@FREEUKRAINE.RU',
    Zelensky,
     '8Jy/.Mu&wj', 
-    TIMESTAMP('2020-05-09',  '00:11:22'), 
-    TIMESTAMP('2004-12-12',  '06:06:06'),
+    TIMESTAMP '2017-08-09 07:00:00 -7:00', 
+    TIMESTAMP '2017-08-09 07:00:00 -7:00',
     'Canada',
     'Ray',
     213,
@@ -278,7 +278,7 @@ INSERT INTO Forum VALUES (
 
 INSERT INTO Forum VALUES (
   4, 
-  'You Have the World's Support', 
+  'You Have the Worlds Support', 
   'UKRAINE',
   345,
   1,
@@ -443,7 +443,7 @@ INSERT INTO Contains_Messages VALUES (
   1,
   'Donald',
   'Trump',
-  TIMESTAMP('2009-04-08',  '00:11:22')
+  TIMESTAMP '2017-08-09 07:00:00 -7:00'
 );
 
 INSERT INTO Contains_Messages VALUES (
@@ -451,7 +451,7 @@ INSERT INTO Contains_Messages VALUES (
   2,
   'Donald',
   'Duck',
-  TIMESTAMP('2010-04-08',  '00:11:22')
+  TIMESTAMP '2017-08-09 07:00:00 -7:00'
 );
 
 INSERT INTO Contains_Messages VALUES (
