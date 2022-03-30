@@ -23,8 +23,8 @@
     </head>
 
     <body>
-        <div style="display: flex; width: 100%; gap: 20px; border: 1px solid grey; padding: 20px;">
-            <div style="width: 40%; height: 100vh; overflow: auto;">
+        <div style="display: flex; width: 100%; height: 90vh; gap: 20px; border: 1px solid grey; padding: 20px;">
+            <div style="width: 60%; overflow: auto;">
                 <h2>Reset</h2>
                 <p>If you wish to reset the table press on the reset button. If this is the first time you're running this page, you MUST use reset</p>
 
@@ -67,7 +67,7 @@
                 </form>
             </div>
 
-            <div style="width: 60%; display: flex; justify-content: center; border-left: 1px solid grey;">
+            <div style="width: 40%; display: flex; justify-content: center;">
                 <?php
                 //this tells the system that it's no longer just parsing html; it's now parsing PHP
 
