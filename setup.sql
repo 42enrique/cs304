@@ -89,7 +89,7 @@ CREATE TABLE Owns_Live_Assets(
   accountID integer not null, 
   assetID integer not null, 
   metadata varchar2(200) not null, 
-  startTime integer not null, 
+  startTime date not null, 
   url varchar2(100) not null UNIQUE, 
   isVideo integer not null, 
   PRIMARY KEY (accountID, assetID), 
@@ -477,8 +477,8 @@ INSERT INTO Owns_Live_Assets VALUES (
   1,
   1,
   'mp3',
-  TIMESTAMP '2017-08-09 07:00:00 -7:00'
-  'www.nwPlus.io',
+  TIMESTAMP '2017-08-09 07:00:00 -7:00',
+  'www.nwPlus.ioddddddd',
   0
 );
 
@@ -496,7 +496,7 @@ INSERT INTO Owns_Live_Assets VALUES (
   5,
   'mp4',
   TIMESTAMP '2017-08-09 07:00:00 -7:00',
-  'www.nwPlus.io',
+  'www.nwPlus.iooo',
   1
 );
 
@@ -514,7 +514,7 @@ INSERT INTO Owns_Live_Assets VALUES (
   8,
   'mp3',
   TIMESTAMP '2017-08-09 07:00:00 -7:00',
-  'www.nwPlus.io',
+  'www.nwPlus.iod',
   0
 );
 
@@ -577,7 +577,7 @@ INSERT INTO Contains_Posts VALUES (
   1,
   2,
   'FREE',
-  TIMESTAMP '2017-08-09 07:00:00 -7:00',
+  TIMESTAMP '2017-08-09 07:00:00 -7:00'
 );
 
 
@@ -586,7 +586,7 @@ INSERT INTO Contains_Posts VALUES (
   1,
   2,
   'WORLD',
-  TIMESTAMP '2017-08-09 07:00:00 -7:00',
+  TIMESTAMP '2017-08-09 07:00:00 -7:00'
 );
 
 INSERT INTO Contains_Posts VALUES (
@@ -594,7 +594,7 @@ INSERT INTO Contains_Posts VALUES (
   1,
   5,
   'PEACE',
-  TIMESTAMP '2017-08-09 07:00:00 -7:00',
+  TIMESTAMP '2017-08-09 07:00:00 -7:00'
 );
 
 INSERT INTO Contains_Posts VALUES (
@@ -602,15 +602,15 @@ INSERT INTO Contains_Posts VALUES (
   1,
   4,
   'LEBRONE',
-  TIMESTAMP '2017-08-09 07:00:00 -7:00',
+  TIMESTAMP '2017-08-09 07:00:00 -7:00'
 );
 
 INSERT INTO Contains_Posts VALUES (
-  5,
+  4,
   1,
   1,
   'JAMES',
-  TIMESTAMP '2017-08-09 07:00:00 -7:00',
+  TIMESTAMP '2017-08-09 07:00:00 -7:00'
 );
 
 INSERT INTO Member_Of VALUES (
@@ -628,9 +628,9 @@ INSERT INTO Member_Of VALUES (
 );
 
 INSERT INTO Member_Of VALUES (
-  2,
+  3,
   TIMESTAMP '2017-08-09 07:00:00 -7:00',
-  6,
+  2,
   1
 );
 
@@ -673,9 +673,9 @@ TIMESTAMP '2017-08-09 07:00:00 -7:00',
 );
 
 INSERT INTO Participates_In VALUES (
-4,
+5,
 TIMESTAMP '2017-08-09 07:00:00 -7:00',
-5
+2
 );
 
 INSERT INTO Link_To VALUES (
@@ -698,7 +698,7 @@ INSERT INTO Link_To VALUES (
   5,5,5
 );
 
-INSERT INTO Uses_Message_Storage (
+INSERT INTO Uses_Message_Storage VALUES (
   1,
   3,
   1231,
@@ -706,7 +706,7 @@ INSERT INTO Uses_Message_Storage (
   513
 );
 
-INSERT INTO Uses_Message_Storage (
+INSERT INTO Uses_Message_Storage VALUES(
   2,
   2,
   23443,
@@ -714,7 +714,7 @@ INSERT INTO Uses_Message_Storage (
   553
 );
 
-INSERT INTO Uses_Message_Storage (
+INSERT INTO Uses_Message_Storage VALUES(
   3,
   1,
   12131,
@@ -722,7 +722,7 @@ INSERT INTO Uses_Message_Storage (
   463
 );
 
-INSERT INTO Uses_Message_Storage (
+INSERT INTO Uses_Message_Storage VALUES (
   4,
   5,
   9232,
@@ -730,11 +730,11 @@ INSERT INTO Uses_Message_Storage (
   345
 );
 
-INSERT INTO Uses_Message_Storage (
+INSERT INTO Uses_Message_Storage VALUES (
   5,
   4,
   2345789,
-  12,
+  18,
   234
 );
 
