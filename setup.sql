@@ -189,9 +189,9 @@ INSERT INTO Account VALUES (
 
 INSERT INTO Account VALUES (
   2, 'mailtrapsupertesting+newsletter@gmail.com',
-   happy-puppy,
+   'happy-puppy',
     '}bGG93Y}Vh', 
-   TIMESTAMP '2017-08-09 07:00:00 -7:00'), 
+   TIMESTAMP '2017-08-09 07:00:00 -7:00', 
     TIMESTAMP '2017-08-09 07:00:00 -7:00',
     'Canada',
     'Ray',
@@ -204,7 +204,7 @@ INSERT INTO Account VALUES (
 
 INSERT INTO Account VALUES (
   3, 'mailtrapsupertesting+premiumacc@gmail.com',
-   wb_dreaming,
+   'wb_dreaming',
     '.WS9bzrVf}', 
     TIMESTAMP '2017-08-09 07:00:00 -7:00', 
    TIMESTAMP '2017-08-09 07:00:00 -7:00',
@@ -221,7 +221,7 @@ INSERT INTO Account VALUES (
 INSERT INTO Account VALUES (
   4, 
   'mailtrapsupertesting+saasupgrade@gmail.com',
-   hackers_anon,
+   'hackers_anon',
     'VP9.fQ$(V^', 
     TIMESTAMP '2017-08-09 07:00:00 -7:00', 
     TIMESTAMP '2017-08-09 07:00:00 -7:00',
@@ -236,8 +236,8 @@ INSERT INTO Account VALUES (
 
 INSERT INTO Account VALUES (
   5, 'LOLOLO@FREEUKRAINE.RU',
-   Zelensky,
-    '8Jy/.Mu&wj', 
+   'Zelensky',
+    '8Jy/.Muwj', 
     TIMESTAMP '2017-08-09 07:00:00 -7:00', 
     TIMESTAMP '2017-08-09 07:00:00 -7:00',
     'Canada',
@@ -297,69 +297,64 @@ INSERT INTO Forum VALUES (
 INSERT INTO Chat VALUES (
   0,
   'SOLIDER',
-  'purple',
   345,
   1,
-  '123'
+  'purple'
 );
 
 INSERT INTO Chat VALUES (
   1,
   'LIBERATION FRONT',
-  'grey',
   345,
   1,
-  '123'
+  'grey'
 );
 
 INSERT INTO Chat VALUES (
   2,
   'Metallica Fans',
-  'red',
   345,
   1,
-  '123'
+  'red'
 );
 
 INSERT INTO Chat VALUES (
   3,
   'FALLOUT 4',
-  'blue',
   345,
   1,
-  '123'
+  'blue'
 );
 
 INSERT INTO Chat VALUES (
   4,
   'Insider Traders',
-  'chrome',
   345,
   1,
-  '123'
+  'gray'
 );
 
-INSERT INTO Subscriptions VALUES (
+INSERT INTO Subscription VALUES (
   0,
   'CORN MAZE'
 );
 
-INSERT INTO Subscriptions VALUES (
+INSERT INTO Subscription VALUES (
   1,
   'BITCOIN WHALERS'
 );
 
-INSERT INTO Subscriptions VALUES (
+INSERT INTO Subscription VALUES (
   2,
   'SECURITIES FRAUD'
 );
 
-INSERT INTO Subscriptions VALUES (
+INSERT INTO Subscription VALUES (
   3,
   'Youtube Dislike'
 );
 
-INSERT INTO Subscriptions VALUES (
+INSERT INTO Subscription VALUES (
   4,
   'LOLOLOLOL'
 );
@@ -419,23 +414,23 @@ INSERT INTO Subscriber VALUES (
 );
 
 INSERT INTO Owns_Subscriptions VALUES (
-  2,0,1
+  2, 0, 1
 );
 
 INSERT INTO Owns_Subscriptions VALUES (
-  1,0,2
+  1, 0, 2
 );
 
 INSERT INTO Owns_Subscriptions VALUES (
-  4,1,3
+  4, 1, 3
 );
 
 INSERT INTO Owns_Subscriptions VALUES (
-  4,4,4
+  4, 4, 4
 );
 
 INSERT INTO Owns_Subscriptions VALUES (
-  4,3,5
+  4, 3, 5
 );
 
 INSERT INTO Contains_Messages VALUES (
