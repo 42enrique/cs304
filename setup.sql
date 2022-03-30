@@ -174,7 +174,7 @@ CREATE TABLE Uses_Pubsub_Platform(
 
 INSERT INTO Account VALUES (
   1, 'mailtrapsupertesting+signup@gmail.com',
-   mighty-dusk,
+   'mighty-dusk',
     'Agc%[A5Ag*', 
     TIMESTAMP '2017-08-09 07:00:00 -7:00', 
    TIMESTAMP '2017-08-09 07:00:00 -7:00',
@@ -459,7 +459,7 @@ INSERT INTO Contains_Messages VALUES (
   3,
   'Vladimir',
   'Putin',
-  TIMESTAMP('2011-04-08',  '00:11:22')
+  TIMESTAMP '2017-08-09 07:00:00 -7:00'
 );
 
 INSERT INTO Contains_Messages VALUES (
@@ -467,7 +467,7 @@ INSERT INTO Contains_Messages VALUES (
   1,
   'Vladimir',
   'Poutine',
-  TIMESTAMP('2022-04-08',  '00:11:22')
+  TIMESTAMP '2017-08-09 07:00:00 -7:00'
 );
 
 INSERT INTO Contains_Messages VALUES (
@@ -475,14 +475,14 @@ INSERT INTO Contains_Messages VALUES (
   2,
   'Zelensky',
   'Netanyahu',
-  TIMESTAMP('2010-04-08',  '00:11:22')
+  TIMESTAMP '2017-08-09 07:00:00 -7:00'
 );
 
 INSERT INTO Owns_Live_Assets VALUES (
   1,
   1,
   'mp3',
-  TIMESTAMP('2021-04-08',  '00:11:22'),
+  TIMESTAMP '2017-08-09 07:00:00 -7:00'
   'www.nwPlus.io',
   0
 );
@@ -491,7 +491,7 @@ INSERT INTO Owns_Live_Assets VALUES (
   3,
   4,
   'mp3',
-  TIMESTAMP('2011-04-08',  '00:11:22'),
+ TIMESTAMP '2017-08-09 07:00:00 -7:00',
   'www.nwHacks.io',
   0
 );
@@ -500,7 +500,7 @@ INSERT INTO Owns_Live_Assets VALUES (
   3,
   5,
   'mp4',
-  TIMESTAMP('2012-04-08',  '00:11:22'),
+  TIMESTAMP '2017-08-09 07:00:00 -7:00',
   'www.nwPlus.io',
   1
 );
@@ -509,7 +509,7 @@ INSERT INTO Owns_Live_Assets VALUES (
   2,
   6,
   'mp3',
-  TIMESTAMP('2019-04-08',  '00:11:22'),
+  TIMESTAMP '2017-08-09 07:00:00 -7:00',
   'www.nwPlus.io',
   0
 );
@@ -518,7 +518,7 @@ INSERT INTO Owns_Live_Assets VALUES (
   5,
   8,
   'mp3',
-  TIMESTAMP('2031-04-08',  '00:11:22'),
+  TIMESTAMP '2017-08-09 07:00:00 -7:00',
   'www.nwPlus.io',
   0
 );
@@ -527,7 +527,7 @@ INSERT INTO Owns_Live_Assets VALUES (
   1,
   11,
   'mp3',
-  TIMESTAMP('2044-04-08',  '00:11:22'),
+  TIMESTAMP '2017-08-09 07:00:00 -7:00',
   'www.google.com',
   1
 );
@@ -582,7 +582,7 @@ INSERT INTO Contains_Posts VALUES (
   1,
   2,
   'FREE',
-  TIMESTAMP('2033-04-08',  '00:11:22'),
+  TIMESTAMP '2017-08-09 07:00:00 -7:00',
 );
 
 
@@ -591,7 +591,7 @@ INSERT INTO Contains_Posts VALUES (
   1,
   2,
   'WORLD',
-  TIMESTAMP('2044-04-08',  '00:11:22'),
+  TIMESTAMP '2017-08-09 07:00:00 -7:00',
 );
 
 INSERT INTO Contains_Posts VALUES (
@@ -599,7 +599,7 @@ INSERT INTO Contains_Posts VALUES (
   1,
   5,
   'PEACE',
-  TIMESTAMP('2055-04-08',  '00:11:22'),
+  TIMESTAMP '2017-08-09 07:00:00 -7:00',
 );
 
 INSERT INTO Contains_Posts VALUES (
@@ -607,7 +607,7 @@ INSERT INTO Contains_Posts VALUES (
   1,
   4,
   'LEBRONE',
-  TIMESTAMP('2066-04-08',  '00:11:22'),
+  TIMESTAMP '2017-08-09 07:00:00 -7:00',
 );
 
 INSERT INTO Contains_Posts VALUES (
@@ -615,71 +615,71 @@ INSERT INTO Contains_Posts VALUES (
   1,
   1,
   'JAMES',
-  TIMESTAMP('2077-04-08',  '00:11:22'),
+  TIMESTAMP '2017-08-09 07:00:00 -7:00',
 );
 
 INSERT INTO Member_Of VALUES (
   1,
-  TIMESTAMP('2077-04-08',  '00:11:22'),
+  TIMESTAMP '2017-08-09 07:00:00 -7:00',
   5,
   0
 );
 
 INSERT INTO Member_Of VALUES (
   1,
-  TIMESTAMP('2055-04-08',  '00:11:22'),
+  TIMESTAMP '2017-08-09 07:00:00 -7:00',
   1,
   1
 );
 
 INSERT INTO Member_Of VALUES (
   2,
-  TIMESTAMP('2088-04-08',  '00:11:22'),
+  TIMESTAMP '2017-08-09 07:00:00 -7:00',
   6,
   1
 );
 
 INSERT INTO Member_Of VALUES (
   4,
-  TIMESTAMP('2099-04-08',  '00:11:22'),
+  TIMESTAMP '2017-08-09 07:00:00 -7:00',
   3,
   0
 );
 
 INSERT INTO Member_Of VALUES (
   5,
-  TIMESTAMP('2011-04-08',  '00:11:22'),
+  TIMESTAMP '2017-08-09 07:00:00 -7:00',
   2,
   1
 );
 
 INSERT INTO Participates_In VALUES (
 1,
-TIMESTAMP('2011-04-08',  '00:11:22'),
+TIMESTAMP '2017-08-09 07:00:00 -7:00',
 1
 );
 
 INSERT INTO Participates_In VALUES (
 3,
-TIMESTAMP('2123-04-08',  '00:11:22'),
+TIMESTAMP '2017-08-09 07:00:00 -7:00',
 2
 );
 
 INSERT INTO Participates_In VALUES (
 3,
-TIMESTAMP('2321-04-08',  '00:11:22'),
+TIMESTAMP '2017-08-09 07:00:00 -7:00',
 3
 );
 
 INSERT INTO Participates_In VALUES (
 5,
-TIMESTAMP('2423-04-08',  '00:11:22'),
+TIMESTAMP '2017-08-09 07:00:00 -7:00',
 4
 );
 
 INSERT INTO Participates_In VALUES (
 4,
-TIMESTAMP('2934-04-08',  '00:11:22'),
+TIMESTAMP '2017-08-09 07:00:00 -7:00',
 5
 );
 
