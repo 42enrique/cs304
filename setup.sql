@@ -160,15 +160,19 @@ CREATE TABLE Uses_Pubsub_Platform(
   FOREIGN KEY(topicID) REFERENCES Topic ON DELETE CASCADE
 );
 
-INSERT INTO Branch 
-VALUES 
-  (
-    1, "ABC", "123 Charming Ave", "Vancouver", 
-    "6041234567"
-  );
-INSERT INTO Branch 
-VALUES 
-  (
-    2, "DEF", "123 Coco Ave", "Vancouver", 
-    "6044567890"
-  );
+-- INSERT INTO Branch 
+-- VALUES 
+--   (
+--     1, "ABC", "123 Charming Ave", "Vancouver", 
+--     "6041234567"
+--   );
+-- INSERT INTO Branch 
+-- VALUES 
+--   (
+--     2, "DEF", "123 Coco Ave", "Vancouver", 
+--     "6044567890"
+--   );
+
+INSERT INTO Account VALUES (
+  1, "mailtrapsupertesting+signup@gmail.com", mighty-dusk, "Agc%[A5Ag*",
+)
