@@ -30,7 +30,8 @@ CREATE TABLE Account(
   followers integer DEFAULT 0,
   following integer DEFAULT 0,
   color varchar2(20) DEFAULT "grey",
-  posts integer DEFAULT 0
+  posts integer DEFAULT 0,
+  top_interest varchar2(20)
 );
 
 CREATE TABLE Forum(
@@ -430,58 +431,94 @@ INSERT INTO Owns_Live_Assets VALUES (
   TIMESTAMP("2021-04-08",  "00:11:22"),
   "www.nwPlus.io",
   0
-)
+);
+
+INSERT INTO Owns_Live_Assets VALUES (
+  3,
+  4,
+  "mp3",
+  TIMESTAMP("2011-04-08",  "00:11:22"),
+  "www.nwHacks.io",
+  0
+);
+
+INSERT INTO Owns_Live_Assets VALUES (
+  3,
+  5,
+  "mp4",
+  TIMESTAMP("2012-04-08",  "00:11:22"),
+  "www.nwPlus.io",
+  1
+);
+
+INSERT INTO Owns_Live_Assets VALUES (
+  2,
+  6,
+  "mp3",
+  TIMESTAMP("2019-04-08",  "00:11:22"),
+  "www.nwPlus.io",
+  0
+);
+
+INSERT INTO Owns_Live_Assets VALUES (
+  5,
+  8,
+  "mp3",
+  TIMESTAMP("2031-04-08",  "00:11:22"),
+  "www.nwPlus.io",
+  0
+);
 
 INSERT INTO Owns_Live_Assets VALUES (
   1,
-  1,
-  "",
-  TIMESTAMP("2009-04-08",  "00:11:22"),
-  "",
-  0
-)
+  11,
+  "mp3",
+  TIMESTAMP("2044-04-08",  "00:11:22"),
+  "www.google.com",
+  1
+);
 
-INSERT INTO Owns_Live_Assets VALUES (
-  1,
-  1,
-  "",
-  TIMESTAMP("2009-04-08",  "00:11:22"),
-  "",
-  0
-)
+INSERT INTO Owns_Static_Assets VALUES (
+4,
+2,
+"https://see.news/wp-content/uploads/2020/12/UK_wildbirds-01-robin.jpg",
+"jpeg",
+"picture",
+"1080p"
+);
 
-INSERT INTO Owns_Live_Assets VALUES (
-  1,
-  1,
-  "",
-  TIMESTAMP("2009-04-08",  "00:11:22"),
-  "",
-  0
-)
+INSERT INTO Owns_Static_Assets VALUES (
+3,
+3,
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMjwkX18cy574Qn82mrfaubhqhdVQylzSpJA&usqp=CAU",
+"png",
+"picture",
+"720p"
+);
 
-INSERT INTO Owns_Live_Assets VALUES (
-  1,
-  1,
-  "",
-  TIMESTAMP("2009-04-08",  "00:11:22"),
-  "",
-  0
-)
+INSERT INTO Owns_Static_Assets VALUES (
+3,
+7,
+"https://www.youtube.com/watch?v=yWcGtLblBxs",
+"mp4",
+"video",
+"4k"
+);
 
-INSERT INTO Owns_Live_Assets VALUES (
-  1,
-  1,
-  "",
-  TIMESTAMP("2009-04-08",  "00:11:22"),
-  "",
-  0
-)
+INSERT INTO Owns_Static_Assets VALUES (
+1,
+9,
+"https://media.giphy.com/media/IsCM8aCBUjpRwJ2IJN/giphy-downsized-large.gif",
+"gif",
+"Metaverse File",
+"8k"
+);
 
-INSERT INTO Owns_Live_Assets VALUES (
-  1,
-  1,
-  "",
-  TIMESTAMP("2009-04-08",  "00:11:22"),
-  "",
-  0
-)
+INSERT INTO Owns_Static_Assets VALUES (
+5,
+10,
+"https://giphy.com/clips/ReadyGames-icon-nft-virtual-marketplace-PcNf8Gm4O3VdXnPaNw",
+"jpeg",
+"GoogleverseFile",
+"16k"
+);
