@@ -173,84 +173,86 @@ CREATE TABLE Uses_Pubsub_Platform(
 );
 
 INSERT INTO Account VALUES (
-  1, "mailtrapsupertesting+signup@gmail.com",
+  1, 'mailtrapsupertesting+signup@gmail.com',
    mighty-dusk,
-    "Agc%[A5Ag*", 
-    TIMESTAMP("2017-07-23",  "13:10:11"), 
-    TIMESTAMP("2002-03-29",  "12:43:01"),
-    "Canada",
-    "Ray",
+    'Agc%[A5Ag*', 
+    TIMESTAMP('2017-07-23',  '13:10:11'), 
+    TIMESTAMP('2002-03-29',  '12:43:01'),
+    'Canada',
+    'Ray',
     213,
     234,
-    "Blue",
+    'Blue',
     234,
-    "stocks"
+    'stocks'
 );
 
 INSERT INTO Account VALUES (
-  2, "mailtrapsupertesting+newsletter@gmail.com",
+  2, 'mailtrapsupertesting+newsletter@gmail.com',
    happy-puppy,
-    "}bGG93Y}Vh", 
-    TIMESTAMP("2014-03-11",  "11:11:11"), 
-    TIMESTAMP("2003-03-24",  "12:43:00"),
-    "Canada",
-    "Ray",
+    '}bGG93Y}Vh', 
+    TIMESTAMP('2014-03-11',  '11:11:11'), 
+    TIMESTAMP('2003-03-24',  '12:43:00'),
+    'Canada',
+    'Ray',
     213,
     234,
-    "Red",
+    'Red',
     234,
-    "stocks"
+    'stocks'
 );
 
 INSERT INTO Account VALUES (
-  3, "mailtrapsupertesting+premiumacc@gmail.com",
+  3, 'mailtrapsupertesting+premiumacc@gmail.com',
    wb_dreaming,
-    ".WS9bzrVf}", 
-    TIMESTAMP("2009-04-08",  "00:11:22"), 
-    TIMESTAMP("2000-03-24",  "12:33:44"),
-    "Canada",
-    "Ray",
+    '.WS9bzrVf}', 
+    TIMESTAMP('2009-04-08',  '00:11:22'), 
+    TIMESTAMP('2000-03-24',  '12:33:44'),
+    'Canada',
+    'Ray',
     213,
     234,
-    "Gray",
+    'Gray',
     234,
-    "stocks"
+    'stocks'
 );
 
+
 INSERT INTO Account VALUES (
-  4, "mailtrapsupertesting+saasupgrade@gmail.com",
+  4, 
+  'mailtrapsupertesting+saasupgrade@gmail.com',
    hackers_anon,
-    "VP9.fQ$(V^", 
-    TIMESTAMP("2022-04-08",  "00:11:22"), 
-    TIMESTAMP("2004-12-12",  "07:07:07"),
-    "Canada",
-    "Ray",
+    'VP9.fQ$(V^', 
+    TIMESTAMP('2022-04-08',  '00:11:22'), 
+    TIMESTAMP('2004-12-12',  '07:07:07'),
+    'Canada',
+    'Ray',
     213,
     234,
-    "Blue",
+    'Blue',
     234,
-    "stocks"
+    'stocks'
 );
 
 INSERT INTO Account VALUES (
-  5, "LOLOLO@FREEUKRAINE.RU",
+  5, 'LOLOLO@FREEUKRAINE.RU',
    Zelensky,
-    "8Jy/.Mu&wj", 
-    TIMESTAMP("2020-05-09",  "00:11:22"), 
-    TIMESTAMP("2004-12-12",  "06:06:06"),
-    "Canada",
-    "Ray",
+    '8Jy/.Mu&wj', 
+    TIMESTAMP('2020-05-09',  '00:11:22'), 
+    TIMESTAMP('2004-12-12',  '06:06:06'),
+    'Canada',
+    'Ray',
     213,
     234,
-    "Blue",
+    'Blue',
     234,
-    "stocks"
+    'stocks'
 );
 
 INSERT INTO Forum VALUES (
   1, 
-  "Spinning Jokes for Ray Tracing University Students", 
-  "PEACE",
+  'Spinning Jokes for Ray Tracing University Students', 
+  'PEACE',
   345,
   1,
   123
@@ -258,8 +260,8 @@ INSERT INTO Forum VALUES (
 
 INSERT INTO Forum VALUES (
   2, 
-  "Kremlin File", 
-  "PUTIN",
+  'Kremlin File', 
+  'PUTIN',
   345,
   1,
   123
@@ -267,8 +269,8 @@ INSERT INTO Forum VALUES (
 
 INSERT INTO Forum VALUES (
   3, 
-  "Wholesome Bird Pictures", 
-  "FREEDOM",
+  'Wholesome Bird Pictures', 
+  'FREEDOM',
   345,
   1,
   123
@@ -276,8 +278,8 @@ INSERT INTO Forum VALUES (
 
 INSERT INTO Forum VALUES (
   4, 
-  "You Have the World's Support", 
-  "UKRAINE",
+  'You Have the World's Support', 
+  'UKRAINE',
   345,
   1,
   123
@@ -285,8 +287,8 @@ INSERT INTO Forum VALUES (
 
 INSERT INTO Forum VALUES (
   5, 
-  "Sims 3 Genocide ", 
-  "PIPELINES",
+  'Sims 3 Genocide ', 
+  'PIPELINES',
   345,
   1,
   123
@@ -294,72 +296,72 @@ INSERT INTO Forum VALUES (
 
 INSERT INTO Chat VALUES (
   0,
-  "SOLIDER",
-  "purple",
+  'SOLIDER',
+  'purple',
   345,
   1,
-  "123"
+  '123'
 );
 
 INSERT INTO Chat VALUES (
   1,
-  "LIBERATION FRONT",
-  "grey",
+  'LIBERATION FRONT',
+  'grey',
   345,
   1,
-  "123"
+  '123'
 );
 
 INSERT INTO Chat VALUES (
   2,
-  "Metallica Fans",
-  "red",
+  'Metallica Fans',
+  'red',
   345,
   1,
-  "123"
+  '123'
 );
 
 INSERT INTO Chat VALUES (
   3,
-  "FALLOUT 4",
-  "blue",
+  'FALLOUT 4',
+  'blue',
   345,
   1,
-  "123"
+  '123'
 );
 
 INSERT INTO Chat VALUES (
   4,
-  "Insider Traders",
-  "chrome",
+  'Insider Traders',
+  'chrome',
   345,
   1,
-  "123"
+  '123'
 );
 
 INSERT INTO Subscriptions VALUES (
   0,
-  "CORN MAZE"
+  'CORN MAZE'
 );
 
 INSERT INTO Subscriptions VALUES (
   1,
-  "BITCOIN WHALERS"
+  'BITCOIN WHALERS'
 );
 
 INSERT INTO Subscriptions VALUES (
   2,
-  "SECURITIES FRAUD"
+  'SECURITIES FRAUD'
 );
 
 INSERT INTO Subscriptions VALUES (
   3,
-  "Youtube Dislike"
+  'Youtube Dislike'
 );
 
 INSERT INTO Subscriptions VALUES (
   4,
-  "LOLOLOLOL"
+  'LOLOLOLOL'
 );
 
 INSERT INTO TOPIC VALUES (
@@ -388,32 +390,32 @@ INSERT INTO TOPIC VALUES (
 
 INSERT INTO Subscriber VALUES (
   0,
-  "RWANADA",
-  "mobile"
+  'RWANADA',
+  'mobile'
 );
 
 INSERT INTO Subscriber VALUES (
   1,
-  "ISRAEL",
-  "laptop"
+  'ISRAEL',
+  'laptop'
 );
 
 INSERT INTO Subscriber VALUES (
   2,
-  "GREECE",
-  "mobile"
+  'GREECE',
+  'mobile'
 );
 
 INSERT INTO Subscriber VALUES (
   3,
-  "CANADA",
-  "PC"
+  'CANADA',
+  'PC'
 );
 
 INSERT INTO Subscriber VALUES (
   4,
-  "ZIMBAWABE",
-  "iphone"
+  'ZIMBAWABE',
+  'iphone'
 );
 
 INSERT INTO Owns_Subscriptions VALUES (
@@ -439,148 +441,148 @@ INSERT INTO Owns_Subscriptions VALUES (
 INSERT INTO Contains_Messages VALUES (
   1,
   1,
-  "Donald",
-  "Trump",
-  TIMESTAMP("2009-04-08",  "00:11:22")
+  'Donald',
+  'Trump',
+  TIMESTAMP('2009-04-08',  '00:11:22')
 );
 
 INSERT INTO Contains_Messages VALUES (
   1,
   2,
-  "Donald",
-  "Duck",
-  TIMESTAMP("2010-04-08",  "00:11:22")
+  'Donald',
+  'Duck',
+  TIMESTAMP('2010-04-08',  '00:11:22')
 );
 
 INSERT INTO Contains_Messages VALUES (
   1,
   3,
-  "Vladimir",
-  "Putin",
-  TIMESTAMP("2011-04-08",  "00:11:22")
+  'Vladimir',
+  'Putin',
+  TIMESTAMP('2011-04-08',  '00:11:22')
 );
 
 INSERT INTO Contains_Messages VALUES (
   2,
   1,
-  "Vladimir",
-  "Poutine",
-  TIMESTAMP("2022-04-08",  "00:11:22")
+  'Vladimir',
+  'Poutine',
+  TIMESTAMP('2022-04-08',  '00:11:22')
 );
 
 INSERT INTO Contains_Messages VALUES (
   2,
   2,
-  "Zelensky",
-  "Netanyahu",
-  TIMESTAMP("2010-04-08",  "00:11:22")
+  'Zelensky',
+  'Netanyahu',
+  TIMESTAMP('2010-04-08',  '00:11:22')
 );
 
 INSERT INTO Owns_Live_Assets VALUES (
   1,
   1,
-  "mp3",
-  TIMESTAMP("2021-04-08",  "00:11:22"),
-  "www.nwPlus.io",
+  'mp3',
+  TIMESTAMP('2021-04-08',  '00:11:22'),
+  'www.nwPlus.io',
   0
 );
 
 INSERT INTO Owns_Live_Assets VALUES (
   3,
   4,
-  "mp3",
-  TIMESTAMP("2011-04-08",  "00:11:22"),
-  "www.nwHacks.io",
+  'mp3',
+  TIMESTAMP('2011-04-08',  '00:11:22'),
+  'www.nwHacks.io',
   0
 );
 
 INSERT INTO Owns_Live_Assets VALUES (
   3,
   5,
-  "mp4",
-  TIMESTAMP("2012-04-08",  "00:11:22"),
-  "www.nwPlus.io",
+  'mp4',
+  TIMESTAMP('2012-04-08',  '00:11:22'),
+  'www.nwPlus.io',
   1
 );
 
 INSERT INTO Owns_Live_Assets VALUES (
   2,
   6,
-  "mp3",
-  TIMESTAMP("2019-04-08",  "00:11:22"),
-  "www.nwPlus.io",
+  'mp3',
+  TIMESTAMP('2019-04-08',  '00:11:22'),
+  'www.nwPlus.io',
   0
 );
 
 INSERT INTO Owns_Live_Assets VALUES (
   5,
   8,
-  "mp3",
-  TIMESTAMP("2031-04-08",  "00:11:22"),
-  "www.nwPlus.io",
+  'mp3',
+  TIMESTAMP('2031-04-08',  '00:11:22'),
+  'www.nwPlus.io',
   0
 );
 
 INSERT INTO Owns_Live_Assets VALUES (
   1,
   11,
-  "mp3",
-  TIMESTAMP("2044-04-08",  "00:11:22"),
-  "www.google.com",
+  'mp3',
+  TIMESTAMP('2044-04-08',  '00:11:22'),
+  'www.google.com',
   1
 );
 
 INSERT INTO Owns_Static_Assets VALUES (
 4,
 2,
-"https://see.news/wp-content/uploads/2020/12/UK_wildbirds-01-robin.jpg",
-"jpeg",
-"picture",
-"1080p"
+'https://see.news/wp-content/uploads/2020/12/UK_wildbirds-01-robin.jpg',
+'jpeg',
+'picture',
+'1080p'
 );
 
 INSERT INTO Owns_Static_Assets VALUES (
 3,
 3,
-"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMjwkX18cy574Qn82mrfaubhqhdVQylzSpJA&usqp=CAU",
-"png",
-"picture",
-"720p"
+'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMjwkX18cy574Qn82mrfaubhqhdVQylzSpJA&usqp=CAU',
+'png',
+'picture',
+'720p'
 );
 
 INSERT INTO Owns_Static_Assets VALUES (
 3,
 7,
-"https://www.youtube.com/watch?v=yWcGtLblBxs",
-"mp4",
-"video",
-"4k"
+'https://www.youtube.com/watch?v=yWcGtLblBxs',
+'mp4',
+'video',
+'4k'
 );
 
 INSERT INTO Owns_Static_Assets VALUES (
 1,
 9,
-"https://media.giphy.com/media/IsCM8aCBUjpRwJ2IJN/giphy-downsized-large.gif",
-"gif",
-"Metaverse File",
-"8k"
+'https://media.giphy.com/media/IsCM8aCBUjpRwJ2IJN/giphy-downsized-large.gif',
+'gif',
+'Metaverse File',
+'8k'
 );
 
 INSERT INTO Owns_Static_Assets VALUES (
 5,
 10,
-"https://giphy.com/clips/ReadyGames-icon-nft-virtual-marketplace-PcNf8Gm4O3VdXnPaNw",
-"jpeg",
-"GoogleverseFile",
-"16k"
+'https://giphy.com/clips/ReadyGames-icon-nft-virtual-marketplace-PcNf8Gm4O3VdXnPaNw',
+'jpeg',
+'GoogleverseFile',
+'16k'
 );
 
 INSERT INTO Contains_Posts VALUES (
   5,
   1,
   2,
-  "FREE",
-  TIMESTAMP("2033-04-08",  "00:11:22"),
+  'FREE',
+  TIMESTAMP('2033-04-08',  '00:11:22'),
 );
 
 
@@ -588,96 +590,96 @@ INSERT INTO Contains_Posts VALUES (
   1,
   1,
   2,
-  "WORLD",
-  TIMESTAMP("2044-04-08",  "00:11:22"),
+  'WORLD',
+  TIMESTAMP('2044-04-08',  '00:11:22'),
 );
 
 INSERT INTO Contains_Posts VALUES (
   2,
   1,
   5,
-  "PEACE",
-  TIMESTAMP("2055-04-08",  "00:11:22"),
+  'PEACE',
+  TIMESTAMP('2055-04-08',  '00:11:22'),
 );
 
 INSERT INTO Contains_Posts VALUES (
   3,
   1,
   4,
-  "LEBRONE",
-  TIMESTAMP("2066-04-08",  "00:11:22"),
+  'LEBRONE',
+  TIMESTAMP('2066-04-08',  '00:11:22'),
 );
 
 INSERT INTO Contains_Posts VALUES (
   5,
   1,
   1,
-  "JAMES",
-  TIMESTAMP("2077-04-08",  "00:11:22"),
+  'JAMES',
+  TIMESTAMP('2077-04-08',  '00:11:22'),
 );
 
 INSERT INTO Member_Of VALUES (
   1,
-  TIMESTAMP("2077-04-08",  "00:11:22"),
+  TIMESTAMP('2077-04-08',  '00:11:22'),
   5,
   0
 );
 
 INSERT INTO Member_Of VALUES (
   1,
-  TIMESTAMP("2055-04-08",  "00:11:22"),
+  TIMESTAMP('2055-04-08',  '00:11:22'),
   1,
   1
 );
 
 INSERT INTO Member_Of VALUES (
   2,
-  TIMESTAMP("2088-04-08",  "00:11:22"),
+  TIMESTAMP('2088-04-08',  '00:11:22'),
   6,
   1
 );
 
 INSERT INTO Member_Of VALUES (
   4,
-  TIMESTAMP("2099-04-08",  "00:11:22"),
+  TIMESTAMP('2099-04-08',  '00:11:22'),
   3,
   0
 );
 
 INSERT INTO Member_Of VALUES (
   5,
-  TIMESTAMP("2011-04-08",  "00:11:22"),
+  TIMESTAMP('2011-04-08',  '00:11:22'),
   2,
   1
 );
 
 INSERT INTO Participates_In VALUES (
 1,
-TIMESTAMP("2011-04-08",  "00:11:22"),
+TIMESTAMP('2011-04-08',  '00:11:22'),
 1
 );
 
 INSERT INTO Participates_In VALUES (
 3,
-TIMESTAMP("2123-04-08",  "00:11:22"),
+TIMESTAMP('2123-04-08',  '00:11:22'),
 2
 );
 
 INSERT INTO Participates_In VALUES (
 3,
-TIMESTAMP("2321-04-08",  "00:11:22"),
+TIMESTAMP('2321-04-08',  '00:11:22'),
 3
 );
 
 INSERT INTO Participates_In VALUES (
 5,
-TIMESTAMP("2423-04-08",  "00:11:22"),
+TIMESTAMP('2423-04-08',  '00:11:22'),
 4
 );
 
 INSERT INTO Participates_In VALUES (
 4,
-TIMESTAMP("2934-04-08",  "00:11:22"),
+TIMESTAMP('2934-04-08',  '00:11:22'),
 5
 );
 
