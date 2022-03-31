@@ -26,7 +26,7 @@
         <h2>Reset</h2>
         <p>If you wish to reset the table press on the reset button. If this is the first time you're running this page, you MUST use reset</p>
 
-        <form method="POST" action="oracle-test.php">
+        <form method="POST" action="temp.php">
             <!-- if you want another page to load after the button is clicked, you have to specify that page in the action parameter -->
             <input type="hidden" id="resetTablesRequest" name="resetTablesRequest">
             <p><input type="submit" value="Reset" name="reset"></p>
@@ -34,7 +34,7 @@
 
         <hr/>
         <h2>Insert Values into DemoTable</h2>
-        <form method="POST" action="oracle-test.php"> <!--refresh page when submitted-->
+        <form method="POST" action="temp.php"> <!--refresh page when submitted-->
             <input type="hidden" id="insertQueryRequest" name="insertQueryRequest">
             Number: <input type="text" name="insNo"> <br /><br />
             Name: <input type="text" name="insName"> <br /><br />
@@ -43,7 +43,7 @@
         </form>
 
         <h2>Create Account</h2>
-        <form method="POST" action="oracle-test.php"> <!--refresh page when submitted-->
+        <form method="POST" action="temp.php"> <!--refresh page when submitted-->
             <input type="hidden" id="createAccountRequest" name="createAccountRequest">
             Account ID (number): <input type="text" name="accountID"> 
             Email: <input type="text" name="email"> 
@@ -55,7 +55,7 @@
         <hr />
 
         <h2>Update Email</h2>
-        <form method="POST" action="oracle-test.php"> <!--refresh page when submitted-->
+        <form method="POST" action="temp.php"> <!--refresh page when submitted-->
             <input type="hidden" id="updateEmailRequest" name="updateEmailRequest">
             Email: <input type="text" name="email">
             Username: <input type="text" name="username">
@@ -67,7 +67,7 @@
         <hr />
 
         <h2>Select: Find Posts by Content</h2>
-        <form method="GET" action="oracle-test.php"> <!--refresh page when submitted-->
+        <form method="GET" action="temp.php"> <!--refresh page when submitted-->
             <input type="hidden" id="findPostsRequest" name="findPostsRequest">
             Keyword: <input type="text" name="body">
             <input type="submit" name="findPosts"></p>
@@ -76,7 +76,7 @@
         <hr />
 
         <h2>Join:  Users who have been in the same livestream </h2>
-        <form method="POST" action="oracle-test.php"> <!--refresh page when submitted-->
+        <form method="POST" action="temp.php"> <!--refresh page when submitted-->
             <input type="hidden" id="insertQueryRequest" name="insertQueryRequest">
             Likes: <input type="text" name="insNo">
 
@@ -86,7 +86,7 @@
         <hr />
 
         <h2>Projection: Select Forums by Topic</h2>
-        <form method="POST" action="oracle-test.php"> <!--refresh page when submitted-->
+        <form method="POST" action="temp.php"> <!--refresh page when submitted-->
             <input type="hidden" id="insertQueryRequest" name="insertQueryRequest">
 
             <label for="pet-select">Filter Forums by Topic:</label> 
@@ -105,7 +105,7 @@
         <hr />
 
         <h2>Aggregate: Select Users with Most X</h2>
-        <form method="POST" action="oracle-test.php"> <!--refresh page when submitted-->
+        <form method="POST" action="temp.php"> <!--refresh page when submitted-->
             <input type="hidden" id="insertQueryRequest" name="insertQueryRequest">
 
             <label for="pet-select">Select:</label> 
@@ -126,7 +126,7 @@
         <h2>Update Name in DemoTable</h2>
         <p>The values are case sensitive and if you enter in the wrong case, the update statement will not do anything.</p>
 
-        <form method="POST" action="oracle-test.php"> <!--refresh page when submitted-->
+        <form method="POST" action="temp.php"> <!--refresh page when submitted-->
             <input type="hidden" id="updateQueryRequest" name="updateQueryRequest">
             Old Name: <input type="text" name="oldName"> <br /><br />
             New Name: <input type="text" name="newName"> <br /><br />
@@ -137,7 +137,7 @@
         <hr />
 
         <h2>EHWAH</h2>
-        <form method="GET" action="oracle-test.php"> <!--refresh page when submitted-->
+        <form method="GET" action="temp.php"> <!--refresh page when submitted-->
             <input type="hidden" id="countTupleRequest" name="countTupleRequest">
             <input type="submit" name="countTuples"></p>
             
@@ -235,7 +235,7 @@
 
             // Your username is ora_(CWL_ID) and the password is a(student number). For example,
 			// ora_platypus is the username and a12345678 is the password.
-            $db_conn = OCILogon("ora_remc2017", "a96769773", "dbhost.students.cs.ubc.ca:1522/stu");
+            $db_conn = OCILogon("ora_lankun", "a13649355", "dbhost.students.cs.ubc.ca:1522/stu");
 
             if ($db_conn) {
                 debugAlertMessage("Database is Connected");
