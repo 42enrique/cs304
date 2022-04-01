@@ -109,10 +109,18 @@
 
             <hr />
 
-            <h2>PROJECT: Users' Birthday, Favourite Color, Top Interest and Country</h2>
+            <h2>PROJECT: Users' Birthday, Favourite Color, and Another Attribute</h2>
             <form method="GET" action="final.php">
                 <!--refresh page when submitted-->
                 <input type="hidden" id="projectRequest" name="projectRequest">
+
+                <select name="attribute" id="attribute-select">
+                    <option value="">Choose an Option</option>
+                    <option value="top_interest">Top Interest</option>
+                    <option value="dateCreated">Date Joined</option>
+                    <option value="country">Country</option>
+                </select>
+
                 <input type="submit" value="Search" name="projectAttributes" />
             </form>
 
@@ -275,15 +283,15 @@
                 echo "</table></div>";
             }
 
-            function printAttributes($result)
+            function printAttributes($result, $attribute)
             { //prints results from a select statement
                 echo "<div style='display:flex; flex-direction: column;'>";
                 echo "<br>Users' Birthday, Favourite Color, Top Interest, and Country<br>";
                 echo "<table>";
-                echo "<tr><th>Birthday</th><th>Favourite Color</th><th>Top Interest</th><th>Country</th></tr>";
+                echo "<tr><th>Birthday</th><th>Favourite Color</th><th>" . $attribute . "</th></tr>";
 
                 while ($row = OCI_Fetch_Array($result, OCI_BOTH)) {
-                    echo "<tr><td>" . $row["BIRTHDAY"] . "</td><td>" . $row["COLOR"] . "</td><td>" . $row["TOP_INTEREST"] . "</td><td>" . $row["COUNTRY"] . "</td></tr>"; //or just use "echo $row[0]"
+                    echo "<tr><td>" . $row[0] . "</td><td>" . $row[1] . "</td><td>" . $row[2] . "</td></tr>"; //or just use "echo $row[0]"
                 }
 
                 echo "</table></div>";
@@ -397,9 +405,11 @@
 
             function handleProjectRequest()
             {
-                $query = "SELECT DISTINCT birthday, color, top_interest, country FROM Account";
+                $attribute = $_GET['attribute'];
+
+                $query = "SELECT DISTINCT birthday, color, " . $attribute . " FROM Account";
                 $result = executePlainSQL($query);
-                printAttributes($result);
+                printAttributes($result, $attribute);
             }
 
             function handleJoinRequest()
