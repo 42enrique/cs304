@@ -162,7 +162,7 @@
             <form method="GET" action="final.php">
                 <!--refresh page when submitted-->
                 <input type="hidden" id="divisionRequest" name="divisionRequest">
-                <input type="submit" name="Show Users" name="subDivision" />
+                <input type="submit" value="Show Users" name="subDivision" />
 
             </form>
         </div>
@@ -449,7 +449,17 @@
 
             function handleDivisionRequest()
             {
-                // TODO
+                echo "<br>handle division </br>";
+                $all_sub_query = "SELECT subID FROM Subscription";
+                $user_sub_query = "SELECT subID FROM Owns_Subscriptions WHERE Owns_Subscriptions.accountID = account.accountID";
+
+                $query = "SELECT username FROM account WHERE NOT EXISTS ((" . $all_sub_query . ") EXCEPT (" . $user_sub_query . "))";
+                $result = executePlainSQL($query);
+
+                echo "<br>These are users who subscribe to all subscriptions: </br>";
+                while(($row = oci_fetch_array($result)) != false) {
+                    echo "<br>" . $row[0] . "</br>";
+                } 
             }
 
             // HANDLE ALL POST ROUTES
@@ -487,6 +497,7 @@
                     } else if (array_key_exists('nestedAggAverage', $_GET)) {
                         handleNestedAggRequest();
                     } else if (array_key_exists('subDivision', $_GET)) {
+                        echo "<br>These are users who subscribe to all subscriptions: </br>";
                         handleDivisionRequest();
                     }
 
