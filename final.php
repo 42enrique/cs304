@@ -260,14 +260,14 @@
                 }
             }
 
-            function printResult($result)
+            function printForums($result)
             { //prints results from a select statement
-                echo "<br>Retrieved data from table demoTable:<br>";
+                echo "<br>Forum Matching the Topic<br>";
                 echo "<table>";
-                echo "<tr><th>ID</th><th>Name</th></tr>";
+                echo "<tr><th>Forum ID</th><th>Forum Name</th></tr>";
 
                 while ($row = OCI_Fetch_Array($result, OCI_BOTH)) {
-                    echo "<tr><td>" . $row["ID"] . "</td><td>" . $row["NAME"] . "</td></tr>"; //or just use "echo $row[0]"
+                    echo "<tr><td>" . $row["FORUMID"] . "</td><td>" . $row["NAME"] . "</td></tr>"; //or just use "echo $row[0]"
                 }
 
                 echo "</table>";
