@@ -175,7 +175,7 @@
             <form method="GET" action="final.php">
                 <!--refresh page when submitted-->
                 <input type="hidden" id="divisionRequest" name="divisionRequest">
-                <input type="submit" name="Show Users" name="subDivision"/>
+                <input type="submit" name="Show Users" name="subDivision" />
 
             </form>
         </div>
@@ -456,8 +456,10 @@
 
             if (isset($_POST['insertSubmit']) || isset($_POST['deleteSubmit']) || isset($_POST['updateSubmit'])) {
                 handlePOSTRequest();
-            } else if (isset($_GET['selectRequest']) || isset($_GET['selectPostRequest']) || isset($_GET['projectRequest'])
-            || isset($_GET['joinRequest']) || isset($_GET['aggRequest']) || isset($_GET['nestedAggRequest']) || isset($_GET['divisionRequest'])) { // TODO this will have all the other requests
+            } else if (
+                isset($_GET['selectRequest']) || isset($_GET['selectPostRequest']) || isset($_GET['projectRequest'])
+                || isset($_GET['joinRequest']) || isset($_GET['aggRequest']) || isset($_GET['nestedAggRequest']) || isset($_GET['divisionRequest'])
+            ) { // TODO this will have all the other requests
                 handleGETRequest();
             }
             ?>
