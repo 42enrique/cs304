@@ -362,9 +362,7 @@
                     // you need the wrap the old name and new name values with single quotations
                     executePlainSQL("UPDATE account SET email='" . $new_email . "' WHERE email='" . $old_email . "'");
                     OCICommit($db_conn);
-                } else {
-                    echo "<br> There was an error updating your email, please double check your email and password <br>";
-                }
+                } 
             }
 
             function handleResetRequest()
