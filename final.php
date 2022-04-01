@@ -356,6 +356,19 @@
             function handleDeleteRequest()
             {
                 //TODO
+                global $db_conn;
+
+                $email = $_POST['email'];
+                $username = $_POST['username'];
+                $password = $_POST['password'];
+
+                $query = "SELECT * FROM account WHERE email='" . $email . "' AND password='" . $password . "'";
+                $result = executePlainSQL($query);
+
+                if (oci_fetch_row($result) != false) {
+                    executePlainSQL("DELETE FROM account WHERE email='" . $email . "'");
+                    OCICommit($db_conn);
+                }
             }
 
             function handleUpdateRequest()
