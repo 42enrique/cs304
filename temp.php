@@ -44,7 +44,7 @@
                             Favourite Color: <input type="text" name="color">
                         </div>
                     </div>
-                    <input type="submit" value="Create My Account" name="insertSubmit"></p>
+                    <input type="submit" value="Create My Account" name="insertSubmit"/>
                 </form>
                 <hr />
 
@@ -56,7 +56,7 @@
                     Username: <input type="text" name="username">
                     Password: <input type="text" name="password">
                     
-                    <input type="submit" value="Delete My Account" name="deleteSubmit"></p>
+                    <input type="submit" value="Delete My Account" name="deleteSubmit"/>
                 </form>
 
                 <hr />
@@ -68,7 +68,7 @@
                     New Email: <input type="text" name="new_email">
                     Password: <input type="text" name="password">
                     
-                    <input type="submit" value="Update My Email" name="updateSubmit"></p>
+                    <input type="submit" value="Update My Email" name="updateSubmit"/>
                 </form>
 
                 <hr />
@@ -87,7 +87,7 @@
                         <option value="politics">Politics</option>
                     </select>
 
-                    <input type="submit" value="Show Forums" name="selectSubmit"></p>
+                    <input type="submit" value="Show Forums" name="selectSubmit"/>
                 </form>
 
                 <hr />
@@ -97,7 +97,7 @@
                     <input type="hidden" id="selectPostRequest" name="selectPostRequest">
                     Keyword: <input type="text" name="keyword">
 
-                    <input type="submit" value="Find Posts" name="selectPostSubmit"></p>
+                    <input type="submit" value="Find Posts" name="selectPostSubmit"/>
                 </form>
 
                 <hr />
@@ -108,7 +108,7 @@
 
                     Target Country: <input type="text" name="country">
 
-                    <input type="submit" value="Search" name="projectSubmit"></p>
+                    <input type="submit" value="Search" name="projectSubmit"/>
                 </form>
 
                 <hr />
@@ -118,7 +118,7 @@
                     <input type="hidden" id="joinRequest" name="joinRequest">
                     Livestream ID: <input type="number" name="liveID">
 
-                    <input type="submit" value="Find" name="joinSubmit"></p>
+                    <input type="submit" value="Find" name="joinSubmit"/>
                 </form>
 
                 <hr />
@@ -137,7 +137,7 @@
                         <option value="pictures">Pictures</option>
                     </select>
 
-                    <input type="submit" value="Find" name="aggSubmit"></p>
+                    <input type="submit" value="Find" name="aggSubmit"/>
                 </form>
 
                 <hr />
@@ -156,15 +156,15 @@
                         <option value="pictures">Pictures</option>
                     </select>
 
-                    <input type="submit" value="See Average" name="nestedAggSubmit"></p>
+                    <input type="submit" value="See Average" name="nestedAggSubmit"/>
                 </form>
 
                 <hr />
 
-                <h2>EHWAH</h2>
+                <h2>DIVISION: User Who Has All the Subscription Services</h2>
                 <form method="GET" action="temp.php"> <!--refresh page when submitted-->
-                    <input type="hidden" id="countTupleRequest" name="countTupleRequest">
-                    <input type="submit" name="countTuples"></p>
+                    <input type="hidden" id="allSubRequest" name="allSubRequest">
+                    <input type="submit" name="Show Users"/>
                     
                 </form>
             </div>
