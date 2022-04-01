@@ -428,7 +428,23 @@
 
             function handleAggRequest()
             {
-                // TODO
+                $type = $_GET['categories'];
+
+                $max_quantity = "(SELECT MAX(" . $type . ") FROM account)";
+                
+                $query = "SELECT username FROM account WHERE " . $type . "=" . $max_quantity;
+                $result = executePlainSQL($query);
+
+                $max_query = "SELECT MAX(" . $type . ") FROM account";
+                $value = executePlainSQL($max_query);
+                
+                if (($row = oci_fetch_row($value)) != false) {
+                    echo "<br>These are the people with max number (at " . $row[0] . ") of " . $type . ":</br>";
+                }
+
+                while(($row = oci_fetch_array($result)) != false) {
+                    echo "<br>" . $row[0] . "</br>";
+                }                
             }
 
             function handleNestedAggRequest()
