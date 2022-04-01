@@ -467,13 +467,23 @@
 
             function handleDivisionRequest()
             {
-                $all_sub_query = "SELECT subID FROM Subscription";
-                $user_sub_query = "SELECT subID FROM Owns_Subscriptions WHERE Owns_Subscriptions.accountID = account.accountID";
+                $type = $_GET['user-prop'];
 
-                $query = "SELECT username FROM account WHERE NOT EXISTS ((" . $all_sub_query . ") MINUS (" . $user_sub_query . "))";
+                $all_query = "SELECT subID FROM Subscription";
+                $user_query = "SELECT subID FROM Owns_Subscriptions WHERE Owns_Subscriptions.accountID = account.accountID";
+
+                if ($type == 'chat') {
+                    $all_query = "SELECT chatID FROM Chat";
+                    $user_query = "SELECT chatID FROM Participates_In WHERE Participates_In.accountID = account.accountID";                       
+                } else if ($type == 'forum') {
+                    $all_query = "SELECT forumID FROM Forum";
+                    $user_query = "SELECT forumID FROM Member_Of WHERE Member_Of.accountID = account.accountID";                       
+                }
+
+                $query = "SELECT username FROM account WHERE NOT EXISTS ((" . $all_query . ") MINUS (" . $user_query . "))";
                 $result = executePlainSQL($query);
                 
-                echo "<br>These are users who subscribe to all subscriptions: </br>";
+                echo "<br>These are users: </br>";
 
                 while(($row = oci_fetch_array($result)) != false) {
                     echo "<br>" . $row[0] . "</br>";
