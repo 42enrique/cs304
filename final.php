@@ -78,7 +78,7 @@
             <hr />
 
             <h2>SELECT: Select Forums by Topic</h2>
-            <form method="POST" action="final.php">
+            <form method="GET" action="final.php">
                 <!--refresh page when submitted-->
                 <input type="hidden" id="selectRequest" name="selectRequest">
 
@@ -98,7 +98,7 @@
             <hr />
 
             <h2>SELECT: Search Post by Content</h2>
-            <form method="POST" action="final.php">
+            <form method="GET" action="final.php">
                 <!--refresh page when submitted-->
                 <input type="hidden" id="selectPostRequest" name="selectPostRequest">
                 Keyword: <input type="text" name="keyword">
@@ -109,7 +109,7 @@
             <hr />
 
             <h2>PROJECT: Users' Birthday, Favourite Color, and Top Interest by Country</h2>
-            <form method="POST" action="final.php">
+            <form method="GET" action="final.php">
                 <!--refresh page when submitted-->
                 <input type="hidden" id="projectRequest" name="projectRequest">
 
@@ -121,7 +121,7 @@
             <hr />
 
             <h2>JOIN: IDs of Subscribers in a Livestream </h2>
-            <form method="POST" action="final.php">
+            <form method="GET" action="final.php">
                 <!--refresh page when submitted-->
                 <input type="hidden" id="joinRequest" name="joinRequest">
                 Livestream ID: <input type="number" name="liveID">
@@ -132,7 +132,7 @@
             <hr />
 
             <h2>AGGREGATE (& JOIN): Select Users with Most X</h2>
-            <form method="POST" action="final.php">
+            <form method="GET" action="final.php">
                 <!--refresh page when submitted-->
                 <input type="hidden" id="aggRequest" name="aggRequest">
 
@@ -153,7 +153,7 @@
 
             <h2>NESTED AGGREGATION: Average Number of X Per Users</h2>
 
-            <form method="POST" action="final.php">
+            <form method="GET" action="final.php">
                 <!--refresh page when submitted-->
                 <input type="hidden" id="nestedAggRequest" name="nestedAggRequest">
                 <label for="nested-category-select">Select:</label>
@@ -413,9 +413,9 @@
                 }
             }
 
-            if (isset($_POST['updateSubmit']) || isset($_POST['insertSubmit'])) {
+            if (isset($_POST['insertSubmit']) || isset($_POST['deleteSubmit']) || isset($_POST['updateSubmit'])) {
                 handlePOSTRequest();
-            } else if (isset($_GET['countTupleRequest'])) {
+            } else if (isset($_GET['countTupleRequest'])) { // TODO this will have all the other requests
                 handleGETRequest();
             }
             ?>
