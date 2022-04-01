@@ -77,9 +77,9 @@
                 <form method="POST" action="temp.php"> <!--refresh page when submitted-->
                     <input type="hidden" id="selectRequest" name="selectRequest">
 
-                    <label for="pet-select">Filter Forums by Topic:</label> 
+                    <label for="interest-select">Filter Forums by Topic:</label> 
 
-                    <select name="pets" id="pet-select">
+                    <select name="interest" id="interest-select">
                         <option value="">Choose an Option</option>
                         <option value="stocks">Stocks</option>
                         <option value="tech">Tech</option>
