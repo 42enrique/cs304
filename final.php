@@ -332,13 +332,20 @@
             function handleUpdateRequest()
             {
                 global $db_conn;
+                $password = $_POST['password'];
+                $old_email = $_POST['old_email'];
+                $new_email = $_POST['new_email'];
 
-                $old_name = $_POST['oldName'];
-                $new_name = $_POST['newName'];
-
-                // you need the wrap the old name and new name values with single quotations
-                executePlainSQL("UPDATE demoTable SET name='" . $new_name . "' WHERE name='" . $old_name . "'");
-                OCICommit($db_conn);
+                $query = "SELECT * FROM account WHERE email='" . $old_email . "' AND password='" . $password . "'";
+                $result = executePlainSQL($query);
+                
+                if (oci_fetch_row($result) != false) {
+                    // you need the wrap the old name and new name values with single quotations
+                    executePlainSQL("UPDATE account SET email='" . $new_email . "' WHERE email='" . $old_email . "'");
+                    OCICommit($db_conn);
+                } else {
+                    echo "<br> There was an error updating your email, please double check your email and password <br>";
+                }
             }
 
             function handleResetRequest()
