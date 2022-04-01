@@ -61,14 +61,14 @@
 
                 <hr />
 
-                <h2>Update Email</h2>
+                <h2>UPDATE: Update Email</h2>
                 <form method="POST" action="temp.php"> <!--refresh page when submitted-->
                     <input type="hidden" id="updateEmailRequest" name="updateEmailRequest">
-                    Email: <input type="text" name="email">
-                    Username: <input type="text" name="username">
+                    Old Email: <input type="text" name="old_email">
+                    New Email: <input type="text" name="new_email">
                     Password: <input type="text" name="password">
                     
-                    <input type="submit" value="Insert" name="insertSubmit"></p>
+                    <input type="submit" value="Update My Email" name="updateSubmit"></p>
                 </form>
 
                 <hr />
