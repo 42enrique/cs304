@@ -148,20 +148,11 @@
 
             <hr />
 
-            <h2>NESTED AGGREGATION: Average Number of Posts/Followers/Following Per Users</h2>
+            <h2>NESTED AGGREGATION: Average Number of Users Per Country</h2>
 
             <form method="GET" action="final.php">
                 <!--refresh page when submitted-->
                 <input type="hidden" id="nestedAggRequest" name="nestedAggRequest">
-                <label for="nested-category-select">Select:</label>
-
-                <select name="categories" id="nested-category-select">
-                    <option value="">Choose an Option</option>
-                    <option value="posts">Posts</option>
-                    <option value="followers">Followers</option>
-                    <option value="following">Following</option>
-                </select>
-
                 <input type="submit" value="See Average" name="nestedAggAverage" />
             </form>
 
@@ -447,7 +438,21 @@
 
             function handleNestedAggRequest()
             {
-                // TODO
+                $type = $_GET['categories'];
+                
+                $query = "SELECT AVG(" . $type .  "FROM account GROUP BY (";
+                $result = executePlainSQL($query);
+
+                $max_query = "SELECT MAX(" . $type . ") FROM account";
+                $value = executePlainSQL($max_query);
+                
+                if (($row = oci_fetch_row($value)) != false) {
+                    echo "<br>These are the people with max number (at " . $row[0] . ") of " . $type . ":</br>";
+                }
+
+                while(($row = oci_fetch_array($result)) != false) {
+                    echo "<br>" . $row[0] . "</br>";
+                }        
             }
 
             function handleDivisionRequest()
