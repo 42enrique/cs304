@@ -175,7 +175,7 @@
             <form method="GET" action="final.php">
                 <!--refresh page when submitted-->
                 <input type="hidden" id="divisionRequest" name="divisionRequest">
-                <input type="submit" name="Show Users" name="divisionSubmit"/>
+                <input type="submit" name="Show Users" name="subDivision"/>
 
             </form>
         </div>
@@ -436,18 +436,18 @@
                 if (connectToDB()) {
                     if (array_key_exists('selectSubmit', $_GET)) {
                         handleSelectForumsRequest();
-                    } else if (array_key_exists('selectPostSubmit', $_GET)) {
+                    } else if (array_key_exists('selectPosts', $_GET)) {
+                        handleSelectPostsRequest();
+                    } else if (array_key_exists('projectAttributes', $_GET)) {
+                        handleProjectRequest();
+                    } else if (array_key_exists('joinSubscribers', $_GET)) {
+                        handleJoinRequest();
+                    } else if (array_key_exists('aggMax', $_GET)) {
+                        handleAggRequest();
+                    } else if (array_key_exists('nestedAggAverage', $_GET)) {
                         handleCountRequest();
-                    } else if (array_key_exists('countTuples', $_GET)) {
-                        handleCountRequest();
-                    } else if (array_key_exists('countTuples', $_GET)) {
-                        handleCountRequest();
-                    } else if (array_key_exists('countTuples', $_GET)) {
-                        handleCountRequest();
-                    } else if (array_key_exists('countTuples', $_GET)) {
-                        handleCountRequest();
-                    } else if (array_key_exists('countTuples', $_GET)) {
-                        handleCountRequest();
+                    } else if (array_key_exists('subDivision', $_GET)) {
+                        handleDivisionRequest();
                     }
 
                     disconnectFromDB();
