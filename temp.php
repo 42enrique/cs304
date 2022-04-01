@@ -113,15 +113,6 @@
 
                 <hr />
 
-                <h2>Select: Find Posts by Content</h2>
-                <form method="GET" action="temp.php"> <!--refresh page when submitted-->
-                    <input type="hidden" id="findPostsRequest" name="findPostsRequest">
-                    Keyword: <input type="text" name="body">
-                    <input type="submit" name="findPosts"></p>
-                </form>
-
-                <hr />
-
                 <h2>Aggregate: Select Users with Most X</h2>
                 <form method="POST" action="temp.php"> <!--refresh page when submitted-->
                     <input type="hidden" id="insertQueryRequest" name="insertQueryRequest">
