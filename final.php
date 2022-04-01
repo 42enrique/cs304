@@ -109,13 +109,10 @@
 
             <hr />
 
-            <h2>PROJECT: Users' Birthday, Favourite Color, and Top Interest by Country</h2>
+            <h2>PROJECT: Users' Birthday, Favourite Color, Top Interest and Country</h2>
             <form method="GET" action="final.php">
                 <!--refresh page when submitted-->
                 <input type="hidden" id="projectRequest" name="projectRequest">
-
-                Target Country: <input type="text" name="country">
-
                 <input type="submit" value="Search" name="projectAttributes" />
             </form>
 
