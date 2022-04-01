@@ -179,7 +179,7 @@
                 echo htmlentities($e['message']);
                 $success = False;
             }
-
+            echo "<br>doing this: " . $statement . "<br>";
 			return $statement;
 		}
 
@@ -323,12 +323,15 @@
             global $db_conn;
 
             $word = "'%".$_GET['body']."%'";
-            $query = "SELECT * FROM contains_posts WHERE body LIKE " .$word;
-
+            // $query = "SELECT * FROM contains_posts WHERE body LIKE " . $word;
+            $query =  "Select * from contains_posts where body like '%LEB%'";
+            echo "<br>before find</br>";
             $result = executePlainSQL($query);
+            echo "<br>after find</br>";
 
-            while($row = oci_fetch_row($result)) {
-                echo $row[0];       
+            while(($row = oci_fetch_row($result)) != false) {
+                echo "<br>after find 1</br>";
+                echo "<br>number of results: " . $row[0] ."</br>";       
             }
             
         }
@@ -386,6 +389,8 @@
             if (connectToDB()) {
                 if (array_key_exists('findPosts', $_GET)) {
                     handleFindPostsRequest();
+                } else if (array_key_exists('countTuples', $_GET)) {
+                    handleCountRequest();
                 }
 
                 disconnectFromDB();
