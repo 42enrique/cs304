@@ -92,7 +92,7 @@
                     <option value="politics">Politics</option>
                 </select>
 
-                <input type="submit" value="Show Forums" name="selectSubmit" />
+                <input type="submit" value="Show Forums" name="selectForums" />
             </form>
 
             <hr />
@@ -103,7 +103,7 @@
                 <input type="hidden" id="selectPostRequest" name="selectPostRequest">
                 Keyword: <input type="text" name="keyword">
 
-                <input type="submit" value="Find Posts" name="selectPostSubmit" />
+                <input type="submit" value="Find Posts" name="selectPosts" />
             </form>
 
             <hr />
@@ -115,7 +115,7 @@
 
                 Target Country: <input type="text" name="country">
 
-                <input type="submit" value="Search" name="projectSubmit" />
+                <input type="submit" value="Search" name="projectAttributes" />
             </form>
 
             <hr />
@@ -126,7 +126,7 @@
                 <input type="hidden" id="joinRequest" name="joinRequest">
                 Livestream ID: <input type="number" name="liveID">
 
-                <input type="submit" value="Find" name="joinSubmit" />
+                <input type="submit" value="Find" name="joinSubscribers" />
             </form>
 
             <hr />
@@ -146,7 +146,7 @@
                     <option value="pictures">Pictures</option>
                 </select>
 
-                <input type="submit" value="Find" name="aggSubmit" />
+                <input type="submit" value="Find" name="aggMax" />
             </form>
 
             <hr />
@@ -166,7 +166,7 @@
                     <option value="pictures">Pictures</option>
                 </select>
 
-                <input type="submit" value="See Average" name="nestedAggSubmit" />
+                <input type="submit" value="See Average" name="nestedAggAverage" />
             </form>
 
             <hr />
@@ -434,7 +434,19 @@
             function handleGETRequest()
             {
                 if (connectToDB()) {
-                    if (array_key_exists('countTuples', $_GET)) {
+                    if (array_key_exists('selectSubmit', $_GET)) {
+                        handleSelectForumsRequest();
+                    } else if (array_key_exists('selectPostSubmit', $_GET)) {
+                        handleCountRequest();
+                    } else if (array_key_exists('countTuples', $_GET)) {
+                        handleCountRequest();
+                    } else if (array_key_exists('countTuples', $_GET)) {
+                        handleCountRequest();
+                    } else if (array_key_exists('countTuples', $_GET)) {
+                        handleCountRequest();
+                    } else if (array_key_exists('countTuples', $_GET)) {
+                        handleCountRequest();
+                    } else if (array_key_exists('countTuples', $_GET)) {
                         handleCountRequest();
                     }
 
