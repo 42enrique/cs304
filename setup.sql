@@ -772,3 +772,9 @@ INSERT INTO Uses_Pubsub_Platform VALUES (
   50,
   3000
 );
+
+INSERT INTO Streams_To VALUES (
+  1,
+  0,
+  1
+);

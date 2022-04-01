@@ -362,7 +362,7 @@
                 $username = $_POST['username'];
                 $password = $_POST['password'];
 
-                $query = "SELECT * FROM account WHERE email='" . $email . "' AND password='" . $password . "'";
+                $query = "SELECT * FROM account WHERE email='" . $email . "' AND password='" . $password . "' AND username='" . $username . "'";
                 $result = executePlainSQL($query);
 
                 if (oci_fetch_row($result) != false) {
@@ -415,7 +415,15 @@
 
             function handleJoinRequest()
             {
-                // TODO
+                $id = $_GET['liveID'];
+
+                $query = "SELECT Count(*) FROM Streams_To, Subscriber WHERE Streams_To.userID = Subscriber.userID AND Streams_To.sessionID =" . $id;
+                $result = executePlainSQL($query);
+                
+                echo "<br>These are the Subscribers:</br>";
+                while(($row = oci_fetch_array($result)) != false) {
+                    echo "<br>" . $row[0] . "</br>";
+                }
             }
 
             function handleAggRequest()
