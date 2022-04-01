@@ -459,7 +459,7 @@
             } else if (
                 isset($_GET['selectRequest']) || isset($_GET['selectPostRequest']) || isset($_GET['projectRequest'])
                 || isset($_GET['joinRequest']) || isset($_GET['aggRequest']) || isset($_GET['nestedAggRequest']) || isset($_GET['divisionRequest'])
-            ) { // TODO this will have all the other requests
+            ) {
                 handleGETRequest();
             }
             ?>
