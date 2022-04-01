@@ -123,21 +123,21 @@
 
                 <hr />
 
-                <h2>Aggregate: Select Users with Most X</h2>
+                <h2>AGGREGATE (& JOIN): Select Users with Most X</h2>
                 <form method="POST" action="temp.php"> <!--refresh page when submitted-->
-                    <input type="hidden" id="insertQueryRequest" name="insertQueryRequest">
+                    <input type="hidden" id="aggRequest" name="aggRequest">
 
-                    <label for="pet-select">Select:</label> 
+                    <label for="category-select">Select:</label> 
 
-                    <select name="pets" id="pet-select">
+                    <select name="categories" id="category-select">
                         <option value="">Choose an Option</option>
-                        <option value="dog">Posts</option>
-                        <option value="cat">Messages</option>
-                        <option value="hamster">Livestreams</option>
-                        <option value="parrot">Pictures</option>
+                        <option value="posts">Posts</option>
+                        <option value="messages">Messages</option>
+                        <option value="livestreams">Livestreams</option>
+                        <option value="pictures">Pictures</option>
                     </select>
 
-                    <input type="submit" value="Insert" name="insertSubmit"></p>
+                    <input type="submit" value="Find" name="aggSubmit"></p>
                 </form>
 
                 <hr />
