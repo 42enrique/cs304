@@ -262,6 +262,7 @@
 
             function printForums($result)
             { //prints results from a select statement
+                echo "<div style='display:flex; flex-direction: column;'>";
                 echo "<br>Forum Matching the Topic<br>";
                 echo "<table>";
                 echo "<tr><th>Forum ID</th><th>Forum Name</th></tr>";
@@ -270,7 +271,21 @@
                     echo "<tr><td>" . $row["FORUMID"] . "</td><td>" . $row["NAME"] . "</td></tr>"; //or just use "echo $row[0]"
                 }
 
-                echo "</table>";
+                echo "</table></div>";
+            }
+
+            function printPosts($result)
+            { //prints results from a select statement
+                echo "<div style='display:flex; flex-direction: column;'>";
+                echo "<br>Post Matching the Content<br>";
+                echo "<table>";
+                echo "<tr><th>Forum ID</th><th>Post ID</th><th>Post Body</th></tr>";
+
+                while ($row = OCI_Fetch_Array($result, OCI_BOTH)) {
+                    echo "<tr><td>" . $row["FORUMID"] . "</td><td>" . $row["POSTID"] . "</td><td>" . $row["BODY"] . "</td></tr>"; //or just use "echo $row[0]"
+                }
+
+                echo "</table></div>";
             }
 
             function connectToDB()
