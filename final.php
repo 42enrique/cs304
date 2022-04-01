@@ -417,12 +417,12 @@
             function handlePOSTRequest()
             {
                 if (connectToDB()) {
-                    if (array_key_exists('resetTablesRequest', $_POST)) {
-                        handleResetRequest();
+                    if (array_key_exists('createAccountRequest', $_POST)) {
+                        handleInsertRequest();
+                    } else if (array_key_exists('deleteAccountRequest', $_POST)) {
+                        handleDeleteRequest();
                     } else if (array_key_exists('updateEmailRequest', $_POST)) {
                         handleUpdateRequest();
-                    } else if (array_key_exists('createAccountRequest', $_POST)) {
-                        handleInsertRequest();
                     }
 
                     disconnectFromDB();
