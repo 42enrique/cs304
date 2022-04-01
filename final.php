@@ -171,7 +171,7 @@
 
             <hr />
 
-            <h2>DIVISION: Users Who Has All the Subscription Services</h2>
+            <h2>DIVISION: Users Who Have All the Subscription Services</h2>
             <form method="GET" action="final.php">
                 <!--refresh page when submitted-->
                 <input type="hidden" id="divisionRequest" name="divisionRequest">
