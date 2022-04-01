@@ -404,7 +404,7 @@
 
             function handleSelectPostsRequest()
             {
-                $word = "'%".$_GET['keyword']."%'";
+                $word = "'%" . $_GET['keyword'] . "%'";
 
                 $query = "SELECT * FROM contains_posts WHERE body LIKE " . $word;
                 $result = executePlainSQL($query);
@@ -426,9 +426,9 @@
 
                 $query = "SELECT Count(*) FROM Streams_To, Subscriber WHERE Streams_To.userID = Subscriber.userID AND Streams_To.sessionID =" . $id;
                 $result = executePlainSQL($query);
-                
+
                 echo "<br>These are the Subscribers:</br>";
-                while(($row = oci_fetch_array($result)) != false) {
+                while (($row = oci_fetch_array($result)) != false) {
                     echo "<br>" . $row[0] . "</br>";
                 }
             }
@@ -438,31 +438,31 @@
                 $type = $_GET['categories'];
 
                 $max_quantity = "(SELECT MAX(" . $type . ") FROM account)";
-                
+
                 $query = "SELECT username FROM account WHERE " . $type . "=" . $max_quantity;
                 $result = executePlainSQL($query);
 
                 $max_query = "SELECT MAX(" . $type . ") FROM account";
                 $value = executePlainSQL($max_query);
-                
+
                 if (($row = oci_fetch_row($value)) != false) {
                     echo "<br>These are the people with max number (at " . $row[0] . ") of " . $type . ":</br>";
                 }
 
-                while(($row = oci_fetch_array($result)) != false) {
+                while (($row = oci_fetch_array($result)) != false) {
                     echo "<br>" . $row[0] . "</br>";
-                }                
+                }
             }
 
             function handleNestedAggRequest()
-            {  
-                $inner_query = "SELECT COUNT(*) AS count FROM account GROUP BY country";              
+            {
+                $inner_query = "SELECT COUNT(*) AS count FROM account GROUP BY country";
                 $query = "SELECT ROUND(AVG(count), 2) FROM ($inner_query)";
                 $result = executePlainSQL($query);
-                
+
                 if (($row = oci_fetch_row($result)) != false) {
                     echo "<br>Average number of users per country is: " . $row[0] . "";
-                }   
+                }
             }
 
             function handleDivisionRequest()
@@ -474,20 +474,20 @@
 
                 if ($type == 'chat') {
                     $all_query = "SELECT chatID FROM Chat";
-                    $user_query = "SELECT chatID FROM Participates_In WHERE Participates_In.accountID = account.accountID";                       
+                    $user_query = "SELECT chatID FROM Participates_In WHERE Participates_In.accountID = account.accountID";
                 } else if ($type == 'forum') {
                     $all_query = "SELECT forumID FROM Forum";
-                    $user_query = "SELECT forumID FROM Member_Of WHERE Member_Of.accountID = account.accountID";                       
+                    $user_query = "SELECT forumID FROM Member_Of WHERE Member_Of.accountID = account.accountID";
                 }
 
                 $query = "SELECT username FROM account WHERE NOT EXISTS ((" . $all_query . ") MINUS (" . $user_query . "))";
                 $result = executePlainSQL($query);
-                
+
                 echo "<br>These are users: </br>";
 
-                while(($row = oci_fetch_array($result)) != false) {
+                while (($row = oci_fetch_array($result)) != false) {
                     echo "<br>" . $row[0] . "</br>";
-                } 
+                }
             }
 
             // HANDLE ALL POST ROUTES
