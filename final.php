@@ -382,6 +382,7 @@
             {
                 // TODO
                 $topic = $_GET['interest'];
+                echo "<br>" . $topic . "</br>";
 
                 $query = "SELECT FORUMID, NAME FROM Forum WHERE topic='" . $topic . "'";
                 $result = executePlainSQL($query);
@@ -440,7 +441,7 @@
             function handleGETRequest()
             {
                 if (connectToDB()) {
-                    if (array_key_exists('selectSubmit', $_GET)) {
+                    if (array_key_exists('selectForums', $_GET)) {
                         handleSelectForumsRequest();
                     } else if (array_key_exists('selectPosts', $_GET)) {
                         handleSelectPostsRequest();
