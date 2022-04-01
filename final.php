@@ -19,7 +19,7 @@
   <html>
     <head>
 	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-        <title>CPSC 304 PHP/Oracle Demonstration</title>
+        <title>Group 4: Social Media App</title>
     </head>
 
     <body>
