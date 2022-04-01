@@ -329,23 +329,6 @@
                 OCILogoff($db_conn);
             }
 
-            function handleCreateRequest()
-            {
-                global $db_conn;
-                $password = $_POST['password'];
-                $old_email = $_POST['old_email'];
-                $new_email = $_POST['new_email'];
-
-                $query = "SELECT * FROM account WHERE email='" . $old_email . "' AND password='" . $password . "'";
-                $result = executePlainSQL($query);
-
-                if (oci_fetch_row($result) != false) {
-                    // you need the wrap the old name and new name values with single quotations
-                    executePlainSQL("UPDATE account SET email='" . $new_email . "' WHERE email='" . $old_email . "'");
-                    OCICommit($db_conn);
-                }
-            }
-
             function handleInsertRequest()
             {
                 global $db_conn;
