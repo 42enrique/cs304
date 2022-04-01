@@ -389,7 +389,11 @@
 
             function handleSelectPostsRequest()
             {
-                // TODO
+                $word = "'%".$_GET['keyword']."%'";
+
+                $query = "SELECT * FROM contains_posts WHERE body LIKE " . $word;
+                $result = executePlainSQL($query);
+                printPosts($result);
             }
 
             function handleProjectRequest()
