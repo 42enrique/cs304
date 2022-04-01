@@ -73,6 +73,36 @@
 
                 <hr />
 
+                <h2>PROJECT: Users' Birthday, Favourite Color, and Top Interest by Country</h2>
+                <form method="POST" action="temp.php"> <!--refresh page when submitted-->
+                    <input type="hidden" id="projectRequest" name="projectRequest">
+
+                    Target Country: <input type="text" name="country">
+
+                    <input type="submit" value="Search" name="projectSubmit"></p>
+                </form>
+
+                <hr />
+
+                <h2>SELECT: Select Forums by Topic</h2>
+                <form method="POST" action="temp.php"> <!--refresh page when submitted-->
+                    <input type="hidden" id="insertQueryRequest" name="insertQueryRequest">
+
+                    <label for="pet-select">Filter Forums by Topic:</label> 
+
+                    <select name="pets" id="pet-select">
+                        <option value="">Choose an Option</option>
+                        <option value="dog">Stocks</option>
+                        <option value="cat">Tech</option>
+                        <option value="hamster">Furries</option>
+                        <option value="parrot">Feet Pics</option>
+                    </select>
+
+                    <input type="submit" value="Insert" name="insertSubmit"></p>
+                </form>
+
+                <hr />
+
                 <h2>Select: Find Posts by Content</h2>
                 <form method="GET" action="temp.php"> <!--refresh page when submitted-->
                     <input type="hidden" id="findPostsRequest" name="findPostsRequest">
@@ -86,25 +116,6 @@
                 <form method="POST" action="temp.php"> <!--refresh page when submitted-->
                     <input type="hidden" id="insertQueryRequest" name="insertQueryRequest">
                     Likes: <input type="text" name="insNo">
-
-                    <input type="submit" value="Insert" name="insertSubmit"></p>
-                </form>
-
-                <hr />
-
-                <h2>Projection: Select Forums by Topic</h2>
-                <form method="POST" action="temp.php"> <!--refresh page when submitted-->
-                    <input type="hidden" id="insertQueryRequest" name="insertQueryRequest">
-
-                    <label for="pet-select">Filter Forums by Topic:</label> 
-
-                    <select name="pets" id="pet-select">
-                        <option value="">Choose an Option</option>
-                        <option value="dog">Stocks</option>
-                        <option value="cat">Tech</option>
-                        <option value="hamster">Furries</option>
-                        <option value="parrot">Feet Pics</option>
-                    </select>
 
                     <input type="submit" value="Insert" name="insertSubmit"></p>
                 </form>
