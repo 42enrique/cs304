@@ -90,6 +90,7 @@
                     <option value="tech">Tech</option>
                     <option value="sports">Sports</option>
                     <option value="politics">Politics</option>
+                    <option value="politics">Nature</option>
                 </select>
 
                 <input type="submit" value="Show Forums" name="selectForums" />
@@ -380,6 +381,11 @@
             function handleSelectForumsRequest()
             {
                 // TODO
+                $topic = $_GET['interest'];
+
+                $query = "SELECT FORUMID, NAME FROM Forum WHERE topic='" . $topic . "'";
+                $result = executePlainSQL($query);
+                printForums($result);
             }
 
             function handleSelectPostsRequest()

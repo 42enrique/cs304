@@ -252,7 +252,7 @@ INSERT INTO Account VALUES (
 INSERT INTO Forum VALUES (
   1, 
   'Spinning Jokes for Ray Tracing University Students', 
-  'PEACE',
+  'Tech',
   345,
   1,
   123
@@ -261,7 +261,7 @@ INSERT INTO Forum VALUES (
 INSERT INTO Forum VALUES (
   2, 
   'Kremlin File', 
-  'PUTIN',
+  'Politics',
   345,
   1,
   123
@@ -270,7 +270,7 @@ INSERT INTO Forum VALUES (
 INSERT INTO Forum VALUES (
   3, 
   'Wholesome Bird Pictures', 
-  'FREEDOM',
+  'Nature',
   345,
   1,
   123
@@ -279,7 +279,7 @@ INSERT INTO Forum VALUES (
 INSERT INTO Forum VALUES (
   4, 
   'You Have the Worlds Support', 
-  'UKRAINE',
+  'Politics',
   345,
   1,
   123
@@ -288,7 +288,7 @@ INSERT INTO Forum VALUES (
 INSERT INTO Forum VALUES (
   5, 
   'Sims 3 Genocide ', 
-  'PIPELINES',
+  'Politics',
   345,
   1,
   123
