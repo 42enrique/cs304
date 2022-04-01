@@ -338,7 +338,7 @@
 
                 $query = "SELECT * FROM account WHERE email='" . $old_email . "' AND password='" . $password . "'";
                 $result = executePlainSQL($query);
-                
+
                 if (oci_fetch_row($result) != false) {
                     // you need the wrap the old name and new name values with single quotations
                     executePlainSQL("UPDATE account SET email='" . $new_email . "' WHERE email='" . $old_email . "'");
@@ -346,6 +346,32 @@
                 } else {
                     echo "<br> There was an error updating your email, please double check your email and password <br>";
                 }
+            }
+
+            function handleInsertRequest()
+            {
+                global $db_conn;
+
+                //Getting the values from user and insert data into the table
+                $tuple = array(
+                    ":bind1" => $_POST['accountID'],
+                    ":bind2" => $_POST['email'],
+                    ":bind3" => $_POST['username'],
+                    ":bind4" => $_POST['password'],
+                    ":bind5" => $_POST['dateCreated'],
+                    ":bind6" => $_POST['birthday'],
+                    ":bind7" => $_POST['country'],
+                    ":bind8" => $_POST['name'],
+                    ":bind9" => $_POST['color'],
+                    ":bind10" => $_POST['top_interest']
+                );
+
+                $alltuples = array(
+                    $tuple
+                );
+
+                executeBoundSQL("INSERT INTO account (accountID, email, username, password, dateCreated, birthday, country, name, color, top_interest) VALUES (:bind1, :bind2, :bind3, :bind4, TO_DATE(:bind5, 'YYYY-MM-DD'), TO_DATE(:bind6, 'YYYY-MM-DD'), :bind7, :bind8, :bind9, :bind10)", $alltuples);
+                OCICommit($db_conn);
             }
 
             function handleUpdateRequest()
@@ -357,42 +383,12 @@
 
                 $query = "SELECT * FROM account WHERE email='" . $old_email . "' AND password='" . $password . "'";
                 $result = executePlainSQL($query);
-                
+
                 if (oci_fetch_row($result) != false) {
                     // you need the wrap the old name and new name values with single quotations
                     executePlainSQL("UPDATE account SET email='" . $new_email . "' WHERE email='" . $old_email . "'");
                     OCICommit($db_conn);
-                } 
-            }
-
-            function handleResetRequest()
-            {
-                global $db_conn;
-                // Drop old table
-                executePlainSQL("DROP TABLE demoTable");
-
-                // Create new table
-                echo "<br> creating new table <br>";
-                executePlainSQL("CREATE TABLE demoTable (id int PRIMARY KEY, name char(30))");
-                OCICommit($db_conn);
-            }
-
-            function handleInsertRequest()
-            {
-                global $db_conn;
-
-                //Getting the values from user and insert data into the table
-                $tuple = array(
-                    ":bind1" => $_POST['insNo'],
-                    ":bind2" => $_POST['insName']
-                );
-
-                $alltuples = array(
-                    $tuple
-                );
-
-                executeBoundSQL("insert into demoTable values (:bind1, :bind2)", $alltuples);
-                OCICommit($db_conn);
+                }
             }
 
             function handleCountRequest()
@@ -415,7 +411,7 @@
                         handleResetRequest();
                     } else if (array_key_exists('updateEmailRequest', $_POST)) {
                         handleUpdateRequest();
-                    } else if (array_key_exists('insertQueryRequest', $_POST)) {
+                    } else if (array_key_exists('createAccountRequest', $_POST)) {
                         handleInsertRequest();
                     }
 
