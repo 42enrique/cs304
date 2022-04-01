@@ -155,7 +155,7 @@
 
             <form method="POST" action="final.php">
                 <!--refresh page when submitted-->
-                <input type="hidden" id="nestedAggSubmit" name="nestedAggSubmit">
+                <input type="hidden" id="nestedAggRequest" name="nestedAggRequest">
                 <label for="nested-category-select">Select:</label>
 
                 <select name="categories" id="nested-category-select">
@@ -174,8 +174,8 @@
             <h2>DIVISION: Users Who Has All the Subscription Services</h2>
             <form method="GET" action="final.php">
                 <!--refresh page when submitted-->
-                <input type="hidden" id="allSubRequest" name="allSubRequest">
-                <input type="submit" name="Show Users" />
+                <input type="hidden" id="divisionRequest" name="divisionRequest">
+                <input type="submit" name="Show Users" name="divisionSubmit"/>
 
             </form>
         </div>
@@ -413,7 +413,7 @@
                 }
             }
 
-            if (isset($_POST['reset']) || isset($_POST['updateSubmit']) || isset($_POST['insertSubmit'])) {
+            if (isset($_POST['updateSubmit']) || isset($_POST['insertSubmit'])) {
                 handlePOSTRequest();
             } else if (isset($_GET['countTupleRequest'])) {
                 handleGETRequest();
