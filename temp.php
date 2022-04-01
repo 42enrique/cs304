@@ -25,15 +25,26 @@
     <body>
         <div style="display: flex; width: 100%; height: 90vh; gap: 20px; border: 1px solid grey; padding: 20px;">
             <div style="width: 60%; overflow: auto;">
-                <h2>Create Account</h2>
+                <h2>INSERT: Create Account</h2>
                 <form method="POST" action="temp.php"> <!--refresh page when submitted-->
-                    <input type="hidden" id="createAccountRequest" name="createAccountRequest">
-                    Account ID (number): <input type="text" name="accountID"> 
-                    Email: <input type="text" name="email"> 
-                    Username: <input type="text" name="username"> 
-                    Password: <input type="text" name="password">
-
-                    <input type="submit" value="Insert" name="insertSubmit"></p>
+                    <div style="display:flex; gap: 20px;">
+                        <div>
+                            <input type="hidden" id="createAccountRequest" name="createAccountRequest">
+                            Account ID: <input type="number" name="accountID"> 
+                            Email: <input type="text" name="email"> 
+                            Username: <input type="text" name="username"> 
+                            Password: <input type="text" name="password">
+                            Full Name: <input type="text" name="name">
+                        </div>
+                        <div>
+                            Today's Date: <input type="date" name="dateCreated"> 
+                            Your Birthday: <input type="date" name="birthday"> 
+                            Country of Origin: <input type="text" name="country"> 
+                            Top Interest: <input type="text" name="top_interest">                            
+                            Favourite Color: <input type="text" name="color">
+                        </div>
+                    </div>
+                    <input type="submit" value="Create My Account" name="insertSubmit"></p>
                 </form>
                 <hr />
 
@@ -316,7 +327,7 @@
 
                     while(($row = oci_fetch_row($result)) != false) {
                         echo "<br>after find 1</br>";
-                        echo "<br>number of results: " . $row[0] ."</br>";       
+                        echo "<br>number of results: " . $row[0] . $row[1] . $row[2] . $row[3] . $row[4] ."</br>";       
                     }
                     
                 }
