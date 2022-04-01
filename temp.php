@@ -142,15 +142,21 @@
 
                 <hr />
 
-                <h2>Update Name in DemoTable</h2>
-                <p>The values are case sensitive and if you enter in the wrong case, the update statement will not do anything.</p>
-
+                <h2>NESTED AGGREGATION: Average Number of X Per Users</h2>
+                
                 <form method="POST" action="temp.php"> <!--refresh page when submitted-->
-                    <input type="hidden" id="updateQueryRequest" name="updateQueryRequest">
-                    Old Name: <input type="text" name="oldName"> <br /><br />
-                    New Name: <input type="text" name="newName"> <br /><br />
+                    <input type="hidden" id="nestedAggSubmit" name="nestedAggSubmit">
+                    <label for="nested-category-select">Select:</label> 
 
-                    <input type="submit" value="Update" name="updateSubmit"></p>
+                    <select name="categories" id="nested-category-select">
+                        <option value="">Choose an Option</option>
+                        <option value="posts">Posts</option>
+                        <option value="messages">Messages</option>
+                        <option value="livestreams">Livestreams</option>
+                        <option value="pictures">Pictures</option>
+                    </select>
+
+                    <input type="submit" value="See Average" name="nestedAggSubmit"></p>
                 </form>
 
                 <hr />
