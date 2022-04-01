@@ -7,3 +7,9 @@
 # Wrap Up
 - [ ] delete insert.sql
 - [ ] delete cleanup.sql 
+
+# Demo Steps
+1. Run the `setup.sql` script to set up database
+2. QUIT DATABASE FROM TERMINAL
+3. start the url in the format `https://www.students.cs.ubc.ca/~<cwl>/final.php`
+4. money
