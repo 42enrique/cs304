@@ -437,22 +437,14 @@
             }
 
             function handleNestedAggRequest()
-            {
-                $type = $_GET['categories'];
-                
-                $query = "SELECT AVG(" . $type .  "FROM account GROUP BY (";
+            {  
+                $inner_query = "SELECT COUNT(*) AS count FROM account GROUP BY country";              
+                $query = "SELECT ROUND(AVG(count), 2) FROM ($inner_query)";
                 $result = executePlainSQL($query);
-
-                $max_query = "SELECT MAX(" . $type . ") FROM account";
-                $value = executePlainSQL($max_query);
                 
-                if (($row = oci_fetch_row($value)) != false) {
-                    echo "<br>These are the people with max number (at " . $row[0] . ") of " . $type . ":</br>";
-                }
-
-                while(($row = oci_fetch_array($result)) != false) {
-                    echo "<br>" . $row[0] . "</br>";
-                }        
+                if (($row = oci_fetch_row($result)) != false) {
+                    echo "<br>Average number of users per country is: " . $row[0] . "";
+                }   
             }
 
             function handleDivisionRequest()
@@ -493,7 +485,7 @@
                     } else if (array_key_exists('aggMax', $_GET)) {
                         handleAggRequest();
                     } else if (array_key_exists('nestedAggAverage', $_GET)) {
-                        handleCountRequest();
+                        handleNestedAggRequest();
                     } else if (array_key_exists('subDivision', $_GET)) {
                         handleDivisionRequest();
                     }
