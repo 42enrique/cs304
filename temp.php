@@ -87,7 +87,17 @@
                         <option value="politics">Politics</option>
                     </select>
 
-                    <input type="submit" value="Show" name="selectSubmit"></p>
+                    <input type="submit" value="Show Forums" name="selectSubmit"></p>
+                </form>
+
+                <hr />
+
+                <h2>SELECT: Search Post by Content</h2>
+                <form method="POST" action="temp.php"> <!--refresh page when submitted-->
+                    <input type="hidden" id="selectPostRequest" name="selectPostRequest">
+                    Keyword: <input type="text" name="keyword">
+
+                    <input type="submit" value="Find Posts" name="selectPostSubmit"></p>
                 </form>
 
                 <hr />
