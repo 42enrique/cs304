@@ -129,30 +129,30 @@
 
             <hr />
 
-            <h2>AGGREGATE: Find Users with Most Post</h2>
+            <h2>AGGREGATE: Find Users with Most Posts/Followers/Following</h2>
             <form method="GET" action="final.php">
                 <!--refresh page when submitted-->
                 <input type="hidden" id="aggRequest" name="aggRequest">
+
+                <label for="category-select">Select:</label>
+
+                <select name="categories" id="category-select">
+                    <option value="">Choose an Option</option>
+                    <option value="posts">Posts</option>
+                    <option value="followers">Followers</option>
+                    <option value="following">Following</option>
+                </select>
+
                 <input type="submit" value="Find" name="aggMax" />
             </form>
 
             <hr />
 
-            <h2>NESTED AGGREGATION: Average Number of X Per Users</h2>
+            <h2>NESTED AGGREGATION: Average Number of Users Per Country</h2>
 
             <form method="GET" action="final.php">
                 <!--refresh page when submitted-->
                 <input type="hidden" id="nestedAggRequest" name="nestedAggRequest">
-                <label for="nested-category-select">Select:</label>
-
-                <select name="categories" id="nested-category-select">
-                    <option value="">Choose an Option</option>
-                    <option value="posts">Posts</option>
-                    <option value="messages">Messages</option>
-                    <option value="livestreams">Livestreams</option>
-                    <option value="pictures">Pictures</option>
-                </select>
-
                 <input type="submit" value="See Average" name="nestedAggAverage" />
             </form>
 
@@ -417,16 +417,18 @@
 
             function handleAggRequest()
             {
-                $max_quantity = "(SELECT MAX(posts) FROM account)";
+                $type = $_GET['categories'];
+
+                $max_quantity = "(SELECT MAX(" . $type . ") FROM account)";
                 
-                $query = "SELECT username FROM account WHERE posts =" . $max_quantity;
+                $query = "SELECT username FROM account WHERE " . $type . "=" . $max_quantity;
                 $result = executePlainSQL($query);
 
-                $max_query = "SELECT MAX(posts) FROM account";
+                $max_query = "SELECT MAX(" . $type . ") FROM account";
                 $value = executePlainSQL($max_query);
                 
                 if (($row = oci_fetch_row($value)) != false) {
-                    echo "<br>These are the people with max number (at " . $row[0] . ") of posts:</br>";
+                    echo "<br>These are the people with max number (at " . $row[0] . ") of " . $type . ":</br>";
                 }
 
                 while(($row = oci_fetch_array($result)) != false) {
@@ -436,7 +438,21 @@
 
             function handleNestedAggRequest()
             {
-                // TODO
+                $type = $_GET['categories'];
+                
+                $query = "SELECT AVG(" . $type .  "FROM account GROUP BY (";
+                $result = executePlainSQL($query);
+
+                $max_query = "SELECT MAX(" . $type . ") FROM account";
+                $value = executePlainSQL($max_query);
+                
+                if (($row = oci_fetch_row($value)) != false) {
+                    echo "<br>These are the people with max number (at " . $row[0] . ") of " . $type . ":</br>";
+                }
+
+                while(($row = oci_fetch_array($result)) != false) {
+                    echo "<br>" . $row[0] . "</br>";
+                }        
             }
 
             function handleDivisionRequest()
