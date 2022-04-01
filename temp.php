@@ -103,21 +103,21 @@
 
                 <hr />
 
+                <h2>JOIN: IDs of Subscribers in a Livestream </h2>
+                <form method="POST" action="temp.php"> <!--refresh page when submitted-->
+                    <input type="hidden" id="joinRequest" name="joinRequest">
+                    Livestream ID: <input type="number" name="liveID">
+
+                    <input type="submit" value="Find" name="joinSubmit"></p>
+                </form>
+
+                <hr />
+
                 <h2>Select: Find Posts by Content</h2>
                 <form method="GET" action="temp.php"> <!--refresh page when submitted-->
                     <input type="hidden" id="findPostsRequest" name="findPostsRequest">
                     Keyword: <input type="text" name="body">
                     <input type="submit" name="findPosts"></p>
-                </form>
-
-                <hr />
-
-                <h2>Join:  Users who have been in the same livestream </h2>
-                <form method="POST" action="temp.php"> <!--refresh page when submitted-->
-                    <input type="hidden" id="insertQueryRequest" name="insertQueryRequest">
-                    Likes: <input type="text" name="insNo">
-
-                    <input type="submit" value="Insert" name="insertSubmit"></p>
                 </form>
 
                 <hr />
