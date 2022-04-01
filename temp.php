@@ -48,6 +48,19 @@
                 </form>
                 <hr />
 
+                <h2>DELETE: Delete Account</h2>
+                <form method="POST" action="temp.php"> <!--refresh page when submitted-->
+                    <p>Please enter your account info to confirm your account deletion:</p>
+                    <input type="hidden" id="deleteAccountRequest" name="deleteAccountRequest">
+                    Email: <input type="text" name="email">
+                    Username: <input type="text" name="username">
+                    Password: <input type="text" name="password">
+                    
+                    <input type="submit" value="Delete My Account" name="deleteSubmit"></p>
+                </form>
+
+                <hr />
+
                 <h2>Update Email</h2>
                 <form method="POST" action="temp.php"> <!--refresh page when submitted-->
                     <input type="hidden" id="updateEmailRequest" name="updateEmailRequest">
