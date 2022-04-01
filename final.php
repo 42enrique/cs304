@@ -355,6 +355,11 @@
                 OCICommit($db_conn);
             }
 
+            function handleDeleteRequest()
+            {
+                //TODO
+            }
+
             function handleUpdateRequest()
             {
                 global $db_conn;
@@ -372,15 +377,39 @@
                 }
             }
 
-            function handleCountRequest()
+            function handleSelectForumsRequest()
             {
-                global $db_conn;
+                // TODO
+            }
 
-                $result = executePlainSQL("SELECT Count(*) FROM demoTable");
+            function handleSelectPostsRequest()
+            {
+                // TODO
+            }
 
-                if (($row = oci_fetch_row($result)) != false) {
-                    echo "<br> The number of tuples in demoTable: " . $row[0] . "<br>";
-                }
+            function handleProjectRequest()
+            {
+                // TODO
+            }
+
+            function handleJoinRequest()
+            {
+                // TODO
+            }
+
+            function handleAggRequest()
+            {
+                // TODO
+            }
+
+            function handleNestedAggRequest()
+            {
+                // TODO
+            }
+
+            function handleDivisionRequest()
+            {
+                // TODO
             }
 
             // HANDLE ALL POST ROUTES
