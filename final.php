@@ -166,10 +166,18 @@
 
             <hr />
 
-            <h2>DIVISION: Users Who Have All the Subscription Services</h2>
+            <h2>DIVISION: Users Who ____</h2>
             <form method="GET" action="final.php">
                 <!--refresh page when submitted-->
                 <input type="hidden" id="divisionRequest" name="divisionRequest">
+
+                <select name="user-prop" id="user-prop-select">
+                    <option value="">Choose an Option</option>
+                    <option value="sub">Have all the Subscriptions</option>
+                    <option value="chat">Are in All the Chats</option>
+                    <option value="forum">Are in All the Forums</option>
+                </select>
+
                 <input type="submit" value="Show Users" name="subDivision" />
 
             </form>
