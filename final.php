@@ -380,19 +380,11 @@
 
             function handleSelectForumsRequest()
             {
-                // TODO
                 $topic = $_GET['interest'];
 
-                // $query = "SELECT FORUMID, NAME FROM Forum WHERE topic='" . $topic . "'";
-                $query = "SELECT Count(*) FROM Forum WHERE topic='" . $topic . "'";
+                $query = "SELECT FORUMID, NAME FROM Forum WHERE topic='" . $topic . "'";
                 $result = executePlainSQL($query);
-                // printForums($result);
-                // while ($row = OCI_Fetch_Array($result, OCI_BOTH)) {
-                //     echo "<br>" . $row["NAME"] . "</br>"; //or just use "echo $row[0]"
-                // }
-                if (($row = oci_fetch_row($result)) != false) {
-                    echo "<br> The number of tuples in demoTable: " . $row[0] . "<br>";
-                }
+                printForums($result);
             }
 
             function handleSelectPostsRequest()
