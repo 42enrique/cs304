@@ -180,10 +180,10 @@ INSERT INTO Account VALUES (
    TIMESTAMP '2017-08-09 07:00:00 -7:00',
     'United States',
     'Ray',
-    213,
-    234,
+    5467,
+    23454,
     'Blue',
-    234,
+    456,
     'stocks'
 );
 
@@ -195,10 +195,10 @@ INSERT INTO Account VALUES (
     TIMESTAMP '2017-08-09 07:00:00 -7:00',
     'Canada',
     'Ray',
-    213,
-    234,
+    4567,
+    4567,
     'Red',
-    234,
+    4567,
     'tech'
 );
 
@@ -210,10 +210,10 @@ INSERT INTO Account VALUES (
    TIMESTAMP '2017-08-09 07:00:00 -7:00',
     'Canada',
     'Ray',
-    213,
-    234,
+    648,
+    468,
     'Gray',
-    234,
+    468,
     'sports'
 );
 
@@ -227,10 +227,10 @@ INSERT INTO Account VALUES (
     TIMESTAMP '2017-08-09 07:00:00 -7:00',
     'France',
     'Ray',
-    213,
-    234,
+    648846,
+    4522,
     'Blue',
-    234,
+    7411,
     'crypto'
 );
 
@@ -242,15 +242,135 @@ INSERT INTO Account VALUES (
     TIMESTAMP '2017-08-09 07:00:00 -7:00',
     'Ukraine',
     'Ray',
-    213,
-    234,
+    9784,
+    25534,
     'Blue',
-    234,
+    245634,
+    'politics'
+);
+
+INSERT INTO Account VALUES (
+  6, 'LOLOLO@FREEUsdfsdKRAINE.RU',
+   'Zedsfdsflensky',
+    '8Jy/.Msdfsdfuwj', 
+    TIMESTAMP '1967-08-09 07:00:00 -7:00', 
+    TIMESTAMP '2017-08-09 07:00:00 -7:00',
+    'Ukrdsfaine',
+    'Rsdfay',
+    7864,
+    4683,
+    'Blue',
+    3488,
+    'politics'
+);
+
+INSERT INTO Account VALUES (
+  7, 'LOLOLO@FsdfsREEUKRAINE.RU',
+   'Zsdfsdelensky',
+    'sdfsdfsdfsd/.Muwj', 
+    TIMESTAMP '1967-08-09 07:00:00 -7:00', 
+    TIMESTAMP '2017-08-09 07:00:00 -7:00',
+    'Uksdfsdraine',
+    'Rawretay',
+    48642,
+    22222,
+    'Blue',
+    10000,
+    'politics'
+);
+
+INSERT INTO Account VALUES (
+  8, 'LOLOLO@FREhfjsEUKRAINE.RU',
+   'Zelenssfjky',
+    '8Jy/.syjrsMuwj', 
+    TIMESTAMP '1967-08-09 07:00:00 -7:00', 
+    TIMESTAMP '2017-08-09 07:00:00 -7:00',
+    'Ukraigvkvuviuvne',
+    'Rjbkljbhay',
+    111,
+    222,
+    'Blue',
+    333,
+    'politics'
+);
+
+INSERT INTO Account VALUES (
+  9, 'LOfjga;ghoahgap.RU',
+   'Zefgaofgg;afdlensky',
+    '8Jy/lnkflkndf.Muwj', 
+    TIMESTAMP '1967-08-09 07:00:00 -7:00', 
+    TIMESTAMP '2017-08-09 07:00:00 -7:00',
+    'Ukrnjfnjjgfs;laine',
+    'Rkjfjnfgnl;jay',
+    654,
+    456,
+    'Blue',
+    852,
+    'politics'
+);
+
+INSERT INTO Account VALUES (
+  10, 'LOLOLO@kdngslFREEUKRAINE.RU',
+   'Zeadgnjllensky',
+    '8Jyfasg,p/.Muwj', 
+    TIMESTAMP '1967-08-09 07:00:00 -7:00', 
+    TIMESTAMP '2017-08-09 07:00:00 -7:00',
+    'Ukr3465aine',
+    'R634ay',
+    25,
+    85,
+    'Blue',
+    333,
     'politics'
 );
 
 INSERT INTO Forum VALUES (
   1, 
+  'Spinning Jokes for Ray Tracing University Students', 
+  'tech',
+  345,
+  1,
+  123
+);
+
+INSERT INTO Forum VALUES (
+  8, 
+  'Spinning Jokes for Ray Tracing University Students', 
+  'tech',
+  345,
+  1,
+  123
+);
+
+INSERT INTO Forum VALUES (
+  6, 
+  'Spinning Jokes for Ray Tracing University Students', 
+  'tech',
+  345,
+  1,
+  123
+);
+
+INSERT INTO Forum VALUES (
+  7, 
+  'Spinning Jokes for Ray Tracing University Students', 
+  'tech',
+  345,
+  1,
+  123
+);
+
+INSERT INTO Forum VALUES (
+  9, 
+  'Spinning Jokes for Ray Tracing University Students', 
+  'tech',
+  345,
+  1,
+  123
+);
+
+INSERT INTO Forum VALUES (
+  10, 
   'Spinning Jokes for Ray Tracing University Students', 
   'tech',
   345,
@@ -771,10 +891,4 @@ INSERT INTO Uses_Pubsub_Platform VALUES (
   3,
   50,
   3000
-);
-
-INSERT INTO Streams_To VALUES (
-  1,
-  0,
-  1
 );
