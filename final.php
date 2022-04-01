@@ -288,6 +288,20 @@
                 echo "</table></div>";
             }
 
+            function printByCountry($result)
+            { //prints results from a select statement
+                echo "<div style='display:flex; flex-direction: column;'>";
+                echo "<br>Results by Target Country<br>";
+                echo "<table>";
+                echo "<tr><th>Birthday</th><th>Favourite Color</th><th>Top Interest</th></tr>";
+
+                while ($row = OCI_Fetch_Array($result, OCI_BOTH)) {
+                    echo "<tr><td>" . $row["BIRTHDAY"] . "</td><td>" . $row["COLOR"] . "</td><td>" . $row["TOP_INTEREST"] . "</td></tr>"; //or just use "echo $row[0]"
+                }
+
+                echo "</table></div>";
+            }
+
             function connectToDB()
             {
                 global $db_conn;
