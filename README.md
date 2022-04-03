@@ -1,3 +1,8 @@
+# Marking Instructions 
+Thank you for making it here! The source code for the SQL setup script is in `setup.sql` , and the source for our web interface is in `final.php`. 
+
+To view a live demo, please use this link: https://www.students.cs.ubc.ca/~remc2017/final.php
+
 # Resources
 1. `chmod 755 <specific path name to the php file in question!>` to give permission to `php` files
 2.  `ls -la <folder_path>` to check permission of any files in a folder
