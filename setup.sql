@@ -553,6 +553,22 @@ INSERT INTO Owns_Subscriptions VALUES (
   4, 3, 5
 );
 
+INSERT INTO Owns_Subscriptions VALUES (
+  2, 1, 6
+);
+
+INSERT INTO Owns_Subscriptions VALUES (
+  2, 2, 7
+);
+
+INSERT INTO Owns_Subscriptions VALUES (
+  2, 3, 8
+);
+
+INSERT INTO Owns_Subscriptions VALUES (
+  2, 4, 9
+);
+
 INSERT INTO Contains_Messages VALUES (
   1,
   1,
@@ -892,3 +908,33 @@ INSERT INTO Uses_Pubsub_Platform VALUES (
   50,
   3000
 );
+
+INSERT INTO Streams_To VALUES(
+  2, 
+  2, 
+  0
+); 
+
+INSERT INTO Streams_To VALUES(
+  2, 
+  0, 
+  0
+); 
+
+INSERT INTO Streams_To VALUES(
+  2, 
+  3, 
+  0
+); 
+
+INSERT INTO Streams_To VALUES(
+  2, 
+  4, 
+  0
+); 
+
+INSERT INTO Streams_To VALUES(
+  1, 
+  4, 
+  1
+); 

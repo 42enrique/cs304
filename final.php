@@ -19,7 +19,7 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
   <title>Group 4: Social Media App</title>
 </head>
 
@@ -311,7 +311,7 @@
 
         // Your username is ora_(CWL_ID) and the password is a(student number). For example,
         // ora_platypus is the username and a12345678 is the password.
-        $db_conn = OCILogon("ora_lankun", "a13649355", "dbhost.students.cs.ubc.ca:1522/stu");
+        $db_conn = OCILogon("ora_remc2017", "a96769773", "dbhost.students.cs.ubc.ca:1522/stu");
 
         if ($db_conn) {
           debugAlertMessage("Database is Connected");
@@ -427,7 +427,7 @@
         $query = "SELECT Count(*) FROM Streams_To, Subscriber WHERE Streams_To.userID = Subscriber.userID AND Streams_To.sessionID =" . $id;
         $result = executePlainSQL($query);
 
-        echo "<br>These are the Subscribers:</br>";
+        echo "<br>Current Number of Subscribers in Livestream:</br>";
         while (($row = oci_fetch_array($result)) != false) {
           echo "<br>" . $row[0] . "</br>";
         }
